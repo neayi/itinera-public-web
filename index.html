@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Itinera - Nouvelle application SaaS pour l'agriculture. Découverte le 23 février 2026 au SIA'PRO">
+    <meta name="description" content="Itinera - Nouvelle application SaaS pour l'agriculture. Découvrez-la le 23 février 2026 au SIA'PRO">
     <title>Itinera - Bientôt disponible</title>
     <style>
         * {
@@ -273,6 +273,12 @@
             display: block;
         }
 
+        .event-started {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
         /* Footer */
         footer {
             background: var(--primary-color);
@@ -423,7 +429,7 @@
             const distance = eventDate - now;
 
             if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem; color: var(--primary-color);">L\'événement a commencé !</p>';
+                document.getElementById('countdown').innerHTML = '<p class="event-started">L\'événement a commencé !</p>';
                 return;
             }
 
@@ -480,9 +486,6 @@
                 setTimeout(() => {
                     document.getElementById('successMessage').classList.remove('show');
                 }, 5000);
-                
-                // In a real application, you would send the data to a server here
-                console.log('Form submitted successfully');
             }
         });
 

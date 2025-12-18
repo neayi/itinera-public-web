@@ -5,333 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Itinera - Nouvelle application SaaS pour l'agriculture. Découvrez-la le 23 février 2026 au SIA'PRO">
     <title>Itinera - Bientôt disponible</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #2d5016;
-            --secondary-color: #6b9d3b;
-            --accent-color: #f4a261;
-            --text-dark: #2c3e50;
-            --text-light: #ffffff;
-            --bg-light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(135deg, var(--bg-light) 0%, #e9ecef 100%);
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-light);
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Timer Section */
-        .timer-section {
-            background: white;
-            padding: 4rem 0;
-            text-align: center;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .timer-section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .event-info {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .time-unit {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-light);
-            padding: 2rem 1.5rem;
-            border-radius: 10px;
-            min-width: 120px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .time-unit:hover {
-            transform: translateY(-5px);
-        }
-
-        .time-unit .number {
-            font-size: 3rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .time-unit .label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 4rem 0;
-        }
-
-        .about-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .feature-card h3 {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--text-dark);
-            line-height: 1.8;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: white;
-            padding: 4rem 0;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .contact-intro {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .form-group input.error,
-        .form-group textarea.error {
-            border-color: #e74c3c;
-        }
-
-        .error-message {
-            color: #e74c3c;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-
-        .error-message.show {
-            display: block;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-light);
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .success-message {
-            background-color: #d4edda;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            display: none;
-            text-align: center;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
-        .event-started {
-            font-size: 2rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            opacity: 0.9;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .timer-section h2,
-            .about-section h2,
-            .contact-section h2 {
-                font-size: 1.8rem;
-            }
-
-            .time-unit {
-                min-width: 100px;
-                padding: 1.5rem 1rem;
-            }
-
-            .time-unit .number {
-                font-size: 2rem;
-            }
-
-            #countdown {
-                gap: 1rem;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Itinera</h1>
-            <p>L'avenir de l'agriculture connectée</p>
+            <h1><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</h1>
+            <p>L’outil collaboratif pour <b>imaginer</b>, <b>simuler</b> et <b>piloter</b> les transitions agricoles.</p>
         </div>
     </header>
 
@@ -358,6 +38,10 @@
                         <span class="label">Secondes</span>
                     </div>
                 </div>
+                <div>
+                    <a class="btn btn-primary" role="button" href="https://www.sia-pro.com/fr-FR/visiter/commandez-votre-pass?o=AMHM-PARTENAIRES_DIGITAL-TRIPERF&utm_source=website&utm_medium=barter&utm_campaign=siapro-2026-conversion-TRIPED-fr&utm_content=cxpm&utm_term=visiteur">Obtenir un badge pour le SIA'PRO</a><br>
+                    <p class="contact-us-for-coupon"><a href="#contact">Contactez-nous</a> pour obtenir un code de gratuité pour le SIA'PRO !</p>
+                </div>
             </div>
         </section>
 
@@ -366,22 +50,26 @@
                 <h2>Qu'est-ce qu'Itinera ?</h2>
                 <div class="features">
                     <div class="feature-card">
-                        <h3>🌱 Innovation Agricole</h3>
-                        <p>Itinera est une solution SaaS révolutionnaire conçue pour transformer la gestion agricole moderne. Notre plateforme intuitive accompagne les agriculteurs dans leur transition numérique.</p>
+                        <h3>🌱 Modélisation visuelle</h3>
+                        <p>Visualisez chaque étape du système cultural à partir de la rotation de l'agriculteur</p>
                     </div>
                     <div class="feature-card">
-                        <h3>📊 Gestion Intelligente</h3>
-                        <p>Optimisez vos parcelles, suivez vos cultures en temps réel et prenez des décisions éclairées grâce à des données précises et des analyses avancées.</p>
+                        <h3>📊 Simulation intelligente</h3>
+                        <p>Testez des évolutions — rotations, variétés, pratiques — en temps réel</p>
                     </div>
                     <div class="feature-card">
-                        <h3>🤝 Collaboration Simplifiée</h3>
-                        <p>Facilitez la communication entre exploitants, conseillers et partenaires. Itinera centralise toutes vos informations dans un espace collaboratif sécurisé.</p>
+                        <h3>💯 Analyse triple performance</h3>
+                        <p>Mesurez instantanément l'impact technique, économique et environnemental</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🤝 Décision éclairée</h3>
+                        <p>Accompagnez les transitions agricoles du diagnostic à l'action</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="container">
                 <h2>Restez informé</h2>
                 <p class="contact-intro">

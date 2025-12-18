@@ -1,0 +1,362 @@
+// Variables
+$primary-color: #6b9571;
+$secondary-color: #6b9571;
+$accent-color: #f4a261;
+$text-dark: #2c3e50;
+$text-light: #ffffff;
+$bg-light: #f8f9fa;
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --accent-color: #{$accent-color};
+    --text-dark: #{$text-dark};
+    --text-light: #{$text-light};
+    --bg-light: #{$bg-light};
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: $text-dark;
+    background: #f5f5f0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Header */
+header {
+    background: $primary-color;
+    color: $text-light;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+}
+
+/* Timer Section */
+.timer-section {
+    background: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        margin-top: 3rem;
+        background: $primary-color;
+        padding: 0.75rem 1.5rem;
+        color: $text-light;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: background 0.3s ease;
+        &:hover {
+            background: color-mix(in srgb, $primary-color 90%, black);
+        }
+    }
+
+    .contact-us-for-coupon {
+        margin: 2rem 0;
+        
+    }
+
+    #countdown {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+    }
+
+    .time-unit {
+        background: $primary-color;
+        color: $text-light;
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+        min-width: 120px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+    }
+
+}
+
+.event-info {
+    font-size: 1.1rem;
+    color: $secondary-color;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 0;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: 3rem;
+    }
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $text-dark;
+        line-height: 1.8;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    background: white;
+    padding: 4rem 0;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: $text-dark;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $text-dark;
+        font-weight: 500;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $secondary-color;
+        }
+
+        &.error {
+            border-color: #e74c3c;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: $text-light;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: none;
+    text-align: center;
+
+    &.show {
+        display: block;
+    }
+}
+
+.event-started {
+    font-size: 2rem;
+    color: $primary-color;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: $primary-color;
+    color: $text-light;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+
+    p {
+        opacity: 0.9;
+    }
+
+    a {
+        color: $text-light;
+        font-weight: 600;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .timer-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .time-unit {
+        min-width: 100px;
+        padding: 1.5rem 1rem;
+
+        .number {
+            font-size: 2rem;
+        }
+    }
+
+    #countdown {
+        gap: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}

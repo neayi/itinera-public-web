@@ -1,0 +1,16 @@
+{
+  "name": "itinera-public-web",
+  "version": "1.0.0",
+  "description": "Itinera - Public landing page",
+  "scripts": {
+    "build": "sass src/styles.scss dist/styles.css",
+    "watch": "sass --watch src/styles.scss:dist/styles.css",
+    "prod": "sass src/styles.scss dist/styles.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

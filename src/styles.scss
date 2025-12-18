@@ -6,12 +6,7 @@ $text-dark: #2c3e50;
 $text-light: #ffffff;
 $bg-light: #f8f9fa;
 
-// Reset
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Bootstrap overrides and custom styles
 
 :root {
     --primary-color: #{$primary-color};
@@ -27,13 +22,10 @@ body {
     line-height: 1.6;
     color: $text-dark;
     background: #f5f5f0;
-    overflow-x: hidden;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 a {
@@ -73,6 +65,13 @@ header {
     margin: 2rem 0;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    .event-info {
+        font-size: 1.1rem;
+        color: $secondary-color;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
 
     h2 {
         font-size: 2rem;
@@ -138,13 +137,6 @@ header {
 
 }
 
-.event-info {
-    font-size: 1.1rem;
-    color: $secondary-color;
-    margin-bottom: 2rem;
-    font-weight: 500;
-}
-
 /* About Section */
 .about-section {
     padding: 4rem 0;
@@ -155,36 +147,30 @@ header {
         color: $primary-color;
         margin-bottom: 3rem;
     }
-}
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
 
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
+        h3 {
+            color: $secondary-color;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    h3 {
-        color: $secondary-color;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        color: $text-dark;
-        line-height: 1.8;
+        p {
+            color: $text-dark;
+            line-height: 1.8;
+        }
     }
 }
 
@@ -202,104 +188,105 @@ header {
         color: $primary-color;
         margin-bottom: 1rem;
     }
-}
-
-.contact-intro {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    color: $text-dark;
-    font-size: 1.1rem;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-
-    label {
-        display: block;
-        margin-bottom: 0.5rem;
+    
+    .contact-intro {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 3rem;
         color: $text-dark;
-        font-weight: 500;
+        font-size: 1.1rem;
     }
 
-    input,
-    textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 2px solid #e0e0e0;
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: $text-dark;
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border-color: $secondary-color;
+            }
+
+            &.error {
+                border-color: #e74c3c;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+    }
+
+    .error-message {
+        color: #e74c3c;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .submit-btn {
+        background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        color: $text-light;
+        padding: 1rem 3rem;
+        border: none;
         border-radius: 5px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: border-color 0.3s ease;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%;
 
-        &:focus {
-            outline: none;
-            border-color: $secondary-color;
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        &.error {
-            border-color: #e74c3c;
+        &:active {
+            transform: translateY(0);
         }
     }
 
-    textarea {
-        resize: vertical;
-        min-height: 150px;
+    .success-message {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        display: none;
+        text-align: center;
+
+        &.show {
+            display: block;
+        }
     }
 }
 
-.error-message {
-    color: #e74c3c;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    display: none;
-
-    &.show {
-        display: block;
-    }
-}
-
-.submit-btn {
-    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-    color: $text-light;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    &:active {
-        transform: translateY(0);
-    }
-}
-
-.success-message {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    display: none;
-    text-align: center;
-
-    &.show {
-        display: block;
-    }
-}
 
 .event-started {
     font-size: 2rem;
@@ -354,9 +341,5 @@ footer {
 
     #countdown {
         gap: 1rem;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
     }
 }

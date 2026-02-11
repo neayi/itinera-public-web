@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Itinéra - L’outil collaboratif pour imaginer, simuler et piloter les transitions agricoles. Découvrez Itinéra le 23 février 2026 sur le stand de Neayi au SIA'PRO">
+    <meta name="description" content="Itinera - L’outil collaboratif pour imaginer, simuler et piloter les transitions agricoles. Découvrez Itinera le 23 février 2026 sur le stand de Neayi au SIA'PRO">
     <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg">
-    <title>Itinéra by neayi - bientôt disponible...!</title>
+    <title>Itinera by neayi - bientôt disponible...!</title>
     <link rel="icon" type="image/png" href="images/Itinera.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/styles.css">
@@ -29,53 +29,37 @@
 <body>
     <header>
         <div class="container">
-            <h1><img src="images/Itinera.svg" alt="Itinera Logo"> Itinéra</h1>
+            <h1><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</h1>
             <p>L’outil collaboratif pour <b>imaginer</b>, <b>simuler</b> et <b>piloter</b> les transitions agricoles.</p>
         </div>
     </header>
-
-    <main>
-        <section class="timer-section">
-            <div class="container">
-                <h2>Découvrez Itinéra sur le stand de <a href="https://neayi.com" target="_blank">Neayi</a> au SIA'PRO</h2>
-                <p class="event-info">📍 Salon de l'Agriculture - Paris | 📅 23 février 2026</p>
-                <div id="countdown">
-                    <div class="time-unit">
-                        <span class="number" id="days">00</span>
-                        <span class="label">Jours</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="number" id="hours">00</span>
-                        <span class="label">Heures</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="number" id="minutes">00</span>
-                        <span class="label">Minutes</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="number" id="seconds">00</span>
-                        <span class="label">Secondes</span>
-                    </div>
-
-                    <div>
-                        <a class="btn btn-primary" role="button" href="https://www.sia-pro.com/fr-FR/visiter/commandez-votre-pass?o=AMHM-PARTENAIRES_DIGITAL-TRIPERF&utm_source=website&utm_medium=barter&utm_campaign=siapro-2026-conversion-TRIPED-fr&utm_content=cxpm&utm_term=visiteur">Obtenir un badge pour le SIA'PRO</a><br>
-                        <p class="contact-us-for-coupon"><a href="#contact">Contactez-nous</a> pour obtenir un code de gratuité pour le SIA'PRO !</p>
-                    </div>
+    <nav class="sticky-menu" id="stickyMenu">
+        <div class="container">
+            <div class="sticky-menu-content">
+                <div class="sticky-menu-links">
+                    <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
+                    <a href="#about">À propos</a>
+                    <a href="#usecases">Cas d'usage</a>
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#timer">SIA'PRO</a>
+                    <a href="#contact">Contact</a>
                 </div>
+                <a href="https://app.itinera.ag" class="btn btn-light btn-sm">Démarrer</a>
             </div>
-        </section>
-
-        <section class="about-section">
+        </div>
+    </nav>
+    <main>
+        <section class="about-section" id="about">
             <div class="container">
-                <h2>Qu'est-ce qu'Itinéra ?</h2>
+                <h2>Qu'est-ce qu'Itinera ?</h2>
                 <div class="row g-4 mb-4">
                     <div class="col-12 col-lg-8 mx-auto">
-                        <p><b>Itinera</b> est une plateforme web qui permet de modéliser les itinéraires techniques agricoles sous forme <b>visuelle</b>, d’évaluer leur
+                        <p><b>Itinera</b> est une plateforme web qui permet de modéliser les Itineraires techniques agricoles sous forme <b>visuelle</b>, d’évaluer leur
                             triple performance <b>technique</b>, <b>économique</b> et <b>environnementale</b>, et de simuler des évolutions.</p>
                         <p>Grâce à l’intégration de l’<b>intelligence artificielle</b>, la saisie et les calculs sont <b>accélérés</b>, et chaque système de culture devient
                             <b>analysable et exploitable</b> : risques phytosanitaires, cohérence des apports, efficience économique…</p>
                         <p>En capitalisant toutes les simulations dans un <b>corpus géolocalisé et contextualisé</b>, Itinera ouvre la voie à une <b>nouvelle génération de conseil
-                            agricole assisté par IA</b> : des itinéraires de référence, adaptés à chaque territoire, chaque culture, chaque stratégie.</p>
+                            agricole assisté par IA</b> : des Itineraires de référence, adaptés à chaque territoire, chaque culture, chaque stratégie.</p>
                     </div>
                 </div>
 
@@ -106,12 +90,52 @@
                     </div>
                 </div>
 
+                <h2 id="usecases">Cas d'usage</h2>
+                <div class="row g-4 mb-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>👨‍🌾 Agriculteurs</h3>
+                            <p>Analyser rapidement son propre système pour comprendre les coûts, émissions et impact environnemental de chaque opération. Se comparer avec des moyennes et identifier des voies d'amélioration.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>👥 Conseillers</h3>
+                            <p>Susciter une rencontre avec vos agriculteurs pour analyser son système et lui proposer des évolutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>📚 Formation</h3>
+                            <p>Utiliser les Itineraires pré-enregistrés pour expliquer en séance l'impact de tel ou tel cahier des charges ou de telle ou telle opération en terme de marge.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>🔬 Projets de recherche</h3>
+                            <p>Diffuser les indicateurs technico économiques des systèmes étudiés, pour permettre aux agriculteurs et conseillers d'y accéder facilement et de s'y comparer.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>🏢 Filières</h3>
+                            <p>Faire des simulations avec vos agriculteurs pour valider la pertinence d'intégrer une nouvelle production dans leur système.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <h3>🤝 Accompagnement</h3>
+                            <p>Établir un état des lieux de départ de l'agriculteur rapidement pour construire avec lui les voies d'amélioration. Intégrer les données dans un système de suivi du progrès des programmes d'accompagnement.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-12 col-lg-12 mx-auto">
                         <div class="ratio video-container" style="--bs-aspect-ratio: 48.17%;">
                             <iframe
                                 src="https://www.youtube.com/embed/xLkAMfiFwtY?autoplay=1&mute=1&loop=1&playlist=xLkAMfiFwtY&controls=1&rel=0&modestbranding=1&color=white"
-                                title="Présentation Itinéra"
+                                title="Présentation Itinera"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
@@ -122,7 +146,7 @@
             </div>
         </section>
 
-        <section class="features-section">
+        <section class="features-section" id="features">
             <div class="container">
                 <h2>Fonctionnalités de la plateforme</h2>
 
@@ -217,11 +241,41 @@
             </div>
         </section>
 
+        <section class="timer-section" id="timer">
+            <div class="container">
+                <h2>Découvrez Itinera sur le stand de <a href="https://neayi.com" target="_blank">Neayi</a> au SIA'PRO</h2>
+                <p class="event-info">📍 Salon de l'Agriculture - Paris | 📅 23 février 2026</p>
+                <div id="countdown">
+                    <div class="time-unit">
+                        <span class="number" id="days">00</span>
+                        <span class="label">Jours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">Heures</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">Secondes</span>
+                    </div>
+
+                    <div>
+                        <a class="btn btn-primary" role="button" href="https://www.sia-pro.com/fr-FR/visiter/commandez-votre-pass?o=AMHM-PARTENAIRES_DIGITAL-TRIPERF&utm_source=website&utm_medium=barter&utm_campaign=siapro-2026-conversion-TRIPED-fr&utm_content=cxpm&utm_term=visiteur">Obtenir un badge pour le SIA'PRO</a><br>
+                        <p class="contact-us-for-coupon"><a href="#contact">Contactez-nous</a> pour obtenir un code de gratuité pour le SIA'PRO !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-section" id="contact">
             <div class="container">
                 <h2>Restez informé</h2>
                 <p class="contact-intro">
-                    Soyez parmi les premiers à découvrir Itinéra. Laissez-nous vos coordonnées et nous vous tiendrons informé de nos actualités.
+                    Soyez parmi les premiers à découvrir Itinera. Laissez-nous vos coordonnées et nous vous tiendrons informé de nos actualités.
                 </p>
                 <form class="contact-form" id="contactForm">
                     <div class="success-message" id="successMessage">
@@ -364,6 +418,35 @@
                 const errorElement = document.getElementById(errorId);
                 if (errorElement) {
                     errorElement.classList.remove('show');
+                }
+            });
+        });
+
+        // Sticky Menu Handler
+        const stickyMenu = document.getElementById('stickyMenu');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const headerBottom = header.offsetHeight;
+            const scrollTop = window.scrollY;
+
+            if (scrollTop > headerBottom) {
+                stickyMenu.classList.add('visible');
+            } else {
+                stickyMenu.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('.sticky-menu-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
             });
         });

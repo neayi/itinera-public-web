@@ -1,27 +1,27 @@
 // Variables
-$primary-color: #6b9571;
+$primary-color  : #6b9571;
 $secondary-color: #6b9571;
-$accent-color: #f4a261;
-$text-dark: #2c3e50;
-$text-light: #ffffff;
-$bg-light: #f8f9fa;
+$accent-color   : #f4a261;
+$text-dark      : #2c3e50;
+$text-light     : #ffffff;
+$bg-light       : #f8f9fa;
 
 // Bootstrap overrides and custom styles
 
 :root {
-    --primary-color: #{$primary-color};
+    --primary-color  : #{$primary-color};
     --secondary-color: #{$secondary-color};
-    --accent-color: #{$accent-color};
-    --text-dark: #{$text-dark};
-    --text-light: #{$text-light};
-    --bg-light: #{$bg-light};
+    --accent-color   : #{$accent-color};
+    --text-dark      : #{$text-dark};
+    --text-light     : #{$text-light};
+    --bg-light       : #{$bg-light};
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: $text-dark;
-    background: #f5f5f0;
+    color      : $text-dark;
+    background : #f5f5f0;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
 }
 
 a {
-    color: $primary-color;
+    color          : $primary-color;
     text-decoration: none;
 
     &:hover {
@@ -40,55 +40,56 @@ a {
 /* Header */
 header {
     background: $primary-color;
-    color: $text-light;
-    padding: 2rem 0;
+    color     : $text-light;
+    padding   : 2rem 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     h1 {
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
+        font-size     : 3rem;
+        margin-bottom : 0.5rem;
         letter-spacing: 2px;
     }
 
     p {
         font-size: 1.2rem;
-        opacity: 0.9;
+        opacity  : 0.9;
     }
 }
 
 /* Timer Section */
 .timer-section {
-    background: white;
-    padding: 4rem 0;
-    text-align: center;
-    margin: 2rem 0;
+    background   : white;
+    padding      : 4rem 0;
+    text-align   : center;
+    margin       : 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow   : 0 8px 16px rgba(0, 0, 0, 0.1);
 
     .event-info {
-        font-size: 1.1rem;
-        color: $secondary-color;
+        font-size    : 1.1rem;
+        color        : $secondary-color;
         margin-bottom: 2rem;
-        font-weight: 500;
+        font-weight  : 500;
     }
 
     h2 {
-        font-size: 2rem;
-        color: $primary-color;
+        font-size    : 2rem;
+        color        : $primary-color;
         margin-bottom: 1rem;
     }
 
     .btn {
-        margin-top: 3rem;
-        background: $primary-color;
-        padding: 0.75rem 1.5rem;
-        color: $text-light;
-        border: none;
-        border-radius: 5px;
+        margin-top     : 3rem;
+        background     : $primary-color;
+        padding        : 0.75rem 1.5rem;
+        color          : $text-light;
+        border         : none;
+        border-radius  : 5px;
         text-decoration: none;
-        font-size: 1.1rem;
-        transition: background 0.3s ease;
+        font-size      : 1.1rem;
+        transition     : background 0.3s ease;
+
         &:hover {
             background: color-mix(in srgb, $primary-color 90%, black);
         }
@@ -100,38 +101,38 @@ header {
     }
 
     #countdown {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin: 2rem 0;
+        gap            : 2rem;
+        flex-wrap      : wrap;
+        margin         : 2rem 0;
     }
 
     .time-unit {
-        background: $primary-color;
-        color: $text-light;
-        padding: 2rem 1.5rem;
+        background   : $primary-color;
+        color        : $text-light;
+        padding      : 2rem 1.5rem;
         border-radius: 10px;
-        min-width: 120px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transform: translateY(0);
-        transition: transform 0.3s ease;
+        min-width    : 120px;
+        box-shadow   : 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform    : translateY(0);
+        transition   : transform 0.3s ease;
 
         &:hover {
             transform: translateY(-5px);
         }
 
         .number {
-            font-size: 3rem;
+            font-size  : 3rem;
             font-weight: bold;
-            display: block;
+            display    : block;
         }
 
         .label {
-            font-size: 0.9rem;
+            font-size     : 0.9rem;
             text-transform: uppercase;
-            opacity: 0.9;
-            margin-top: 0.5rem;
+            opacity       : 0.9;
+            margin-top    : 0.5rem;
         }
     }
 
@@ -142,66 +143,66 @@ header {
     padding: 4rem 0;
 
     h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: $primary-color;
+        text-align   : center;
+        font-size    : 2.5rem;
+        color        : $primary-color;
         margin-bottom: 3rem;
     }
 
     .feature-card {
-        background: white;
-        padding: 2rem;
+        background   : white;
+        padding      : 2rem;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
+        box-shadow   : 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition   : transform 0.3s ease, box-shadow 0.3s ease;
+        height       : 100%;
 
         &:hover {
-            transform: translateY(-5px);
+            transform : translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         h3 {
-            color: $secondary-color;
-            font-size: 1.5rem;
+            color        : $secondary-color;
+            font-size    : 1.5rem;
             margin-bottom: 1rem;
         }
 
         p {
-            color: $text-dark;
+            color      : $text-dark;
             line-height: 1.8;
         }
     }
 
     .video-container {
         background-color: #f5f5f0;
-        border-radius: 10px;
-        overflow: hidden;
+        border-radius   : 10px;
+        overflow        : hidden;
     }
 }
 
 /* Features Section */
 .features-section {
     background: #f8f9fa;
-    padding: 4rem 0;
-    margin: 2rem 0;
+    padding   : 4rem 0;
+    margin    : 2rem 0;
 
     h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: $primary-color;
+        text-align   : center;
+        font-size    : 2.5rem;
+        color        : $primary-color;
         margin-bottom: 4rem;
     }
 
     .feature-item {
-        display: flex;
-        align-items: center;
-        gap: 3rem;
+        display      : flex;
+        align-items  : center;
+        gap          : 3rem;
         margin-bottom: 4rem;
-        background: white;
-        padding: 2rem;
+        background   : white;
+        padding      : 2rem;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        box-shadow   : 0 4px 8px rgba(0, 0, 0, 0.08);
 
         &:last-child {
             margin-bottom: 0;
@@ -211,15 +212,15 @@ header {
             flex: 1;
 
             h3 {
-                color: $primary-color;
-                font-size: 1.5rem;
+                color        : $primary-color;
+                font-size    : 1.5rem;
                 margin-bottom: 1rem;
-                line-height: 1.4;
+                line-height  : 1.4;
             }
 
             p {
-                color: $text-dark;
-                font-size: 1.1rem;
+                color      : $text-dark;
+                font-size  : 1.1rem;
                 line-height: 1.7;
             }
         }
@@ -228,14 +229,14 @@ header {
             flex: 1;
 
             img {
-                width: 100%;
-                height: auto;
+                width        : 100%;
+                height       : auto;
                 border-radius: 8px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.2);
+                transition   : transform 0.3s ease, box-shadow 0.3s ease;
 
                 &:hover {
-                    transform: translateY(-5px);
+                    transform : translateY(-5px);
                     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
                 }
             }
@@ -251,11 +252,11 @@ header {
     @media (max-width: 992px) {
         .feature-item {
             flex-direction: column !important;
-            gap: 2rem;
+            gap           : 2rem;
 
             .feature-content,
             .feature-image {
-                flex: none;
+                flex : none;
                 width: 100%;
             }
         }
@@ -265,12 +266,12 @@ header {
         padding: 3rem 0;
 
         h2 {
-            font-size: 2rem;
+            font-size    : 2rem;
             margin-bottom: 3rem;
         }
 
         .feature-item {
-            padding: 1.5rem;
+            padding      : 1.5rem;
             margin-bottom: 3rem;
 
             .feature-content {
@@ -288,55 +289,55 @@ header {
 
 /* Contact Section */
 .contact-section {
-    background: white;
-    padding: 4rem 0;
-    margin: 2rem 0;
+    background   : white;
+    padding      : 4rem 0;
+    margin       : 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow   : 0 8px 16px rgba(0, 0, 0, 0.1);
 
     h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: $primary-color;
+        text-align   : center;
+        font-size    : 2.5rem;
+        color        : $primary-color;
         margin-bottom: 1rem;
     }
 
     .contact-intro {
         text-align: center;
-        max-width: 600px;
-        margin: 0 auto 3rem;
-        color: $text-dark;
-        font-size: 1.1rem;
+        max-width : 600px;
+        margin    : 0 auto 3rem;
+        color     : $text-dark;
+        font-size : 1.1rem;
     }
 
     .contact-form {
         max-width: 600px;
-        margin: 0 auto;
-        padding: 0 20px;
+        margin   : 0 auto;
+        padding  : 0 20px;
     }
 
     .form-group {
         margin-bottom: 1.5rem;
 
         label {
-            display: block;
+            display      : block;
             margin-bottom: 0.5rem;
-            color: $text-dark;
-            font-weight: 500;
+            color        : $text-dark;
+            font-weight  : 500;
         }
 
         input,
         textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e0e0e0;
+            width        : 100%;
+            padding      : 0.75rem;
+            border       : 2px solid #e0e0e0;
             border-radius: 5px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
+            font-size    : 1rem;
+            font-family  : inherit;
+            transition   : border-color 0.3s ease;
 
             &:focus {
-                outline: none;
+                outline     : none;
                 border-color: $secondary-color;
             }
 
@@ -346,16 +347,16 @@ header {
         }
 
         textarea {
-            resize: vertical;
+            resize    : vertical;
             min-height: 150px;
         }
     }
 
     .error-message {
-        color: #e74c3c;
-        font-size: 0.875rem;
+        color     : #e74c3c;
+        font-size : 0.875rem;
         margin-top: 0.25rem;
-        display: none;
+        display   : none;
 
         &.show {
             display: block;
@@ -363,19 +364,19 @@ header {
     }
 
     .submit-btn {
-        background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-        color: $text-light;
-        padding: 1rem 3rem;
-        border: none;
+        background   : linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        color        : $text-light;
+        padding      : 1rem 3rem;
+        border       : none;
         border-radius: 5px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 100%;
+        font-size    : 1.1rem;
+        font-weight  : 600;
+        cursor       : pointer;
+        transition   : transform 0.3s ease, box-shadow 0.3s ease;
+        width        : 100%;
 
         &:hover {
-            transform: translateY(-2px);
+            transform : translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -386,12 +387,12 @@ header {
 
     .success-message {
         background-color: #d4edda;
-        color: #155724;
-        padding: 1rem;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-        display: none;
-        text-align: center;
+        color           : #155724;
+        padding         : 1rem;
+        border-radius   : 5px;
+        margin-bottom   : 1rem;
+        display         : none;
+        text-align      : center;
 
         &.show {
             display: block;
@@ -399,19 +400,89 @@ header {
     }
 }
 
+/* Button Styles */
+.btn-sm {
+    padding  : 0.5rem 1.2rem !important;
+    font-size: 0.9rem !important;
+}
+
 
 .event-started {
-    font-size: 2rem;
-    color: $primary-color;
+    font-size  : 2rem;
+    color      : $primary-color;
     font-weight: 600;
+}
+
+/* Sticky Menu */
+.sticky-menu {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    right     : 0;
+    background: $primary-color;
+    color     : $text-light;
+    padding   : 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index   : 1000;
+    opacity   : 0;
+    visibility: hidden;
+    transform : translateY(-100%);
+    transition: all 300ms ease-in-out;
+
+    &.visible {
+        opacity   : 1;
+        visibility: visible;
+        transform : translateY(0);
+    }
+
+    .sticky-menu-content {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        gap            : 2rem;
+    }
+
+    .sticky-menu-links {
+        display    : flex;
+        gap        : 2rem;
+        align-items: center;
+
+        a {
+            color      : $text-light;
+            font-weight: 500;
+            transition : opacity 200ms ease;
+
+            &:hover {
+                opacity        : 0.8;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 27px;
+
+        img {
+            position: relative;
+            top     : -4px;
+        }
+    }
+
+    .btn {
+        white-space: nowrap;
+    }
+
+    main {
+        padding-top: 60px;
+    }
 }
 
 /* Footer */
 footer {
     background: $primary-color;
-    color: $text-light;
+    color     : $text-light;
     text-align: center;
-    padding: 2rem 0;
+    padding   : 2rem 0;
     margin-top: 4rem;
 
     p {
@@ -419,13 +490,17 @@ footer {
     }
 
     a {
-        color: $text-light;
+        color      : $text-light;
         font-weight: 600;
     }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .sticky-menu {
+        display: none;
+    }
+
     header {
         h1 {
             font-size: 2rem;
@@ -444,7 +519,7 @@ footer {
 
     .time-unit {
         min-width: 100px;
-        padding: 1.5rem 1rem;
+        padding  : 1.5rem 1rem;
 
         .number {
             font-size: 2rem;

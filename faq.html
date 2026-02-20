@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Questions fréquentes sur Itinera - L'outil collaboratif pour les transitions agricoles.">
+    <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg">
+    <title>FAQ - Itinera by neayi</title>
+    <link rel="icon" type="image/png" href="images/Itinera.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/styles.css">
+
+    <!-- Matomo -->
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//matomo.tripleperformance.fr/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '4']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+<body>
+    <nav class="sticky-menu visible" id="stickyMenu">
+        <div class="container">
+            <div class="sticky-menu-content">
+                <div class="sticky-menu-links">
+                    <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
+                    <a href="index.html#about">À propos</a>
+                    <a href="index.html#usecases">Cas d'usage</a>
+                    <a href="index.html#features">Fonctionnalités</a>
+                    <a href="index.html#timer">SIA'PRO</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <a href="https://app.itinera.ag" class="btn btn-light btn-sm">Démarrer</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="about-section mt-5">
+            <div class="container">
+                <h1 style="margin-bottom: 3rem;">Itinera - Questions fréquentes</h1>
+
+                <div class="faq-item">
+                    <h2>Quels sont les indicateurs ?</h2>
+                    <p>Les indicateurs actuellement présents dans Itinera sont les suivants :</p>
+                    <p>
+                        <strong>Indicateurs agronomiques :</strong> Azote minéral, Azote organique<br>
+                        <strong>Indicateurs environnementaux :</strong> IFT<a class="info" target="_blank" href="https://wiki.tripleperformance.fr/wiki/IFT">🛈</a>, EIQ<a class="info" target="_blank" href="https://wiki.tripleperformance.fr/wiki/EIQ">🛈</a>, GES<br>
+                        <strong>Indicateurs sociaux :</strong> Temps de travail<br>
+                        <strong>Indicateurs économiques :</strong> Coûts phytos, semences, engrais, mécanisation, GNR, RH, Irrigation, Produits totaux (rendement x prix de vente), Marge
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Je fais de la vente à terme, est-ce que ça ne va pas fausser la comparaison de marge ?</h2>
+                    <p>Si bien sûr. C'est pour ça que l'important n'est pas forcément d'avoir des données réelles mais des données "typiques", pour pouvoir effectuer des comparaisons "toutes choses étant égales par ailleurs". Certains systèmes effectivement auront des valeurs plus proches de la réalité et d'autres des valeurs plus indicatives, l'important est de comparer les grandes masses.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Peut-on ajouter des indicateurs ?</h2>
+                    <p>Oui, nous sommes toujours à la recherche d'indicateurs pertinents. Nous avons par exemple ajouté l'EIQ récemment (voir <a href="https://cals.cornell.edu/integrated-pest-management/risk-assessment/eiq" target="_blank">explication ici</a>), et il en existe plein que nous aimerions intégrer (par exemple le <a href="https://wiki.tripleperformance.fr/wiki/STIR" target="_blank">STIR</a>). La seule contrainte, c'est que ces indicateurs puissent être calculés sur la base d'abaques (référentiels, barêmes), ramenés à l'ha et à l'année, et puissent être comparés de façon sûre. Pour cette raison, certains indicateurs sont plus compliqués à ajouter (par exemple la satisfaction de l'agriculteur, qui nécessite une enquête qualitative, ou bien le taux de couverture de la parcelle, qui nécessite une observation satellite).</p>
+                    <p>Si vous avez des besoins d'indicateurs, n'hésitez pas à nous en parler !</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Pourquoi avoir choisi des indicateurs uniquement "à la parcelle" ?</h2>
+                    <p>C'est un choix que nous avons fait pour permettre une comparaison plus facile entre les systèmes. En effet, les indicateurs au niveau "ferme" sont compliqués à comparer car ils mélangent rapidement des réalités très différentes (ateliers de transformation, organisation salariale, modes de vente, contrats, etc…). L'avantage de la parcelle est qu'on peut facilement décomposer le système et le rapporter à des unités comparables (à l'ha et à l'année).</p>
+                    <p>Ces indicateurs ne permettent évidemment pas d'optimiser ce qui est de l'ordre de la gestion de la ferme, des modes de vente, ni même des aides</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Comment est calculée la marge ?</h2>
+                    <p>La marge qui est calculée dans Itinera est une "marge de production" – c'est-à-dire qu'elle calcule le prix de vente (moyen ou indiqué) x le rendement (moyen ou indiqué), auquel on soustrait les charges.</p>
+                    <p>Itinera ne prend pas en compte dans son modèle les aides diverses et variées (PAC). Le coût d'achat de la production (et des semences) en revanche dépend du fait qu'on soit en Bio ou non.</p>
+                    <p>Si une intervention n'est pas explicitement documentée dans le système, elle est ignorée du calcul – c'est pour cette raison qu'il est pertinent d'utiliser Itinera en aval d'un logiciel de traçabilité ou de gestion des parcelles.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Le calcul assisté par IA est-il fiable ?</h2>
+                    <p>Nous avons passé un temps important pour affiner la manière dont les calculs IA sont faits. Un "prompt" assez complexe force l'IA à être la plus précise possible. Cependant il existe au moins trois limites :</p>
+                    <ul>
+                        <li>L'IA ne peut pas inventer des infos au-delà de ce qui est décrit dans le système – donc par exemple si la quantité de produit n'est pas précisée, l'IA va donner une valeur très approximative des indicateurs associés.</li>
+                        <li>L'IA utilise pour le moment un modèle "généraliste". Nous prévoyons d'intégrer dans notre modèle des référentiels (MCP), mais ce travail sera fait dans un second temps. Nous souhaitons par ailleurs que ces référentiels soient partagés avec le reste de la communauté afin que les autres outils basés sur IA puissent avoir des modes de calculs qui soient alignés.</li>
+                        <li>L'IA ne remplace pas un expert – parfois l'œil de l'expert et sa connaissance du système sont nécessaires pour identifier les endroits où l'IA a répondu "à côté". Ceci est en particulier vrai avec certains indicateurs "complexes" (comme le STIR) qui nécessitent de prendre en compte l'outil, son côté animé ou non, et la profondeur de travail.</li>
+                    </ul>
+                    <p>De manière générale, nous avons pu constater que l'IA est suffisamment fiable pour faire des comparaisons de variantes de systèmes (reconception).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Est-on obligé d'utiliser l'IA ?</h2>
+                    <p>Pas du tout ! Si vous connaissez déjà les valeurs des différents indicateurs pour votre système, vous pouvez les importer ou les saisir directement dans Itinera. Vous pourrez ainsi bénéficier de la visualisation, de la possibilité de comparer le système avec les autres, voire de le rendre publique pour permettre aux autres de s'y référer.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Est-ce que je peux me faire conseiller par l'IA ou modifier mon système avec l'IA ?</h2>
+                    <p>Itinera le permet, mais c'est encore très expérimental. Itinera n'a pas encore, en particulier, de référentiels d'itinéraires techniques qui lui permettraient de proposer des évolutions de système pertinentes (par exemple si on lui demande d'ajouter une production de sarrasin, les interventions associées seront assez simplistes). Nous avons prévu d'affiner les réponses de l'IA dans le futur, mais nous croyons cependant que l'IA ne remplacera pas le conseiller tant le sujet est complexe et nécessite d'en savoir un peu plus sur le contexte de l'agriculteur que qui peut être décrit dans Itinera.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Est-ce que le fait d'utiliser de l'IA n'est pas contre productif d'un point de vue environnemental ?</h2>
+                    <p>Il s'agit d'un sujet sur lequel nous sommes très sensibles. Oui l'IA est une activité très extractiviste – qu'il s'agisse des terres rares, de l'eau ou bien sûr de l'énergie pour son fonctionnement. Cependant nous pensons que c'est aussi un outil fantastique quand il est bien utilisé, et que les bénéfices pour notre système agricole peuvent compenser son utilisation. A titre d'ordre de grandeur, un calcul d'indicateur dans Itinera consomme approximativement quelques dizaines de grammes de CO2, tandis qu'un labour évité est dans les 70kg CO2/ha (plus en réalité si on intègre le relâchement de carbone du sol), ce qui peut rapidement conduire à des chiffres importants ramenés à la ferme France (10M d'ha).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Est-ce que Itinera est gratuit ? Combien ça coûte ?</h2>
+                    <p>Non, Itinera n'est pas gratuit – nous sommes encore en cours de réflexion sur le modèle économique et tant que celui-ci ne sera pas finalisé, l'accès restera ouvert dans la limite du raisonnable. Notre objectif est que le développement et la maintenance de l'outil puisse être équilibré par son utilisation. Le coût sera adapté au besoin et aux capacités financières liées à chaque usage.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Quelle est la différence avec Assolia ?</h2>
+                    <p>Assolia est un système d'optimisation de la campagne (de l'assolement) sous contraintes. En gros Assolia prend les informations d'historique d'assolement, les besoins de productions (contrats, besoins pour les ateliers d'élevage, …). Assolia fait donc un calcul le plus précis possible pour déterminer l'optimum d'assolement pour la prochaine campagne.</p>
+                    <p>Itinera en revanche fait des calculs rudimentaires, dont l'objectif est de comparer l'ensemble à des variantes du système, voire à des systèmes documentés par d'autres. Itinera et Assolia peuvent d'ailleurs s'intégrer de façon à importer les données déjà saisies dans Assolia afin de faire des simulations d'évolutions plus radicales du système.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Est-ce qu'utiliser l'IA permet de développer les pratiques agroécologiques ?</h2>
+                    <p>Itinera est agnostique en matière de pratiques. Son objectif est de permettre de bien calibrer des évolutions de pratiques sur les 3 axes économique, environnemental et social. A chacun de faire les choix pertinents en fonction de sa stratégie.</p>
+                    <p>En revanche, plus on comprend précisément les conséquences d'une pratique, plus il sera facile de choisir en connaissance de cause.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h2>Itinera est intégrable avec d'autres systèmes Assolia, Abelio, Systerre, Piloterra etc… Est-ce automatiquement accessible ou bien faut-il l'activer spécifiquement ?</h2>
+                    <p>Les outils sont compatibles par API. Mais l'intégration se fait sur option/demande.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Restez informé</h2>
+                <p class="contact-intro">
+                    Intéressés par Itinera ? Prenez rendez-vous :
+                </p>
+                <form class="contact-form" id="contactForm">
+                    <div class="success-message" id="successMessage">
+                        Merci pour votre message ! Nous vous contacterons bientôt.
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError">Veuillez entrer votre nom</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Dites-nous en plus sur votre besoin !</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        // Form Validation and Submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
+
+            let isValid = true;
+
+            // Validate name
+            const name = document.getElementById('name');
+            if (name.value.trim() === '') {
+                document.getElementById('nameError').classList.add('show');
+                name.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                document.getElementById('emailError').classList.add('show');
+                email.classList.add('error');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Disable submit button to prevent double submission
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Envoi en cours...';
+
+                // Prepare form data
+                const formData = new FormData(this);
+
+                try {
+                    // Send form data to PHP script
+                    const response = await fetch('send-email.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        // Show success message
+                        document.getElementById('successMessage').classList.add('show');
+
+                        // Reset form
+                        this.reset();
+
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            document.getElementById('successMessage').classList.remove('show');
+                        }, 5000);
+                    } else {
+                        // Show error
+                        alert('Erreur: ' + result.message);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            }
+        });
+
+        // Remove error styling on input
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorId = this.id + 'Error';
+                const errorElement = document.getElementById(errorId);
+                if (errorElement) {
+                    errorElement.classList.remove('show');
+                }
+            });
+        });
+
+        // Sticky Menu Handler
+        const stickyMenu = document.getElementById('stickyMenu');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const headerBottom = header.offsetHeight;
+            const scrollTop = window.scrollY;
+
+            if (scrollTop > headerBottom) {
+                stickyMenu.classList.add('visible');
+            } else {
+                stickyMenu.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('.sticky-menu-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .faq-item {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-item h2 {
+            color: #2c5f2d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .faq-item ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+        
+        .faq-item a {
+            color: #2c5f2d;
+            text-decoration: underline;
+        }
+        
+        .faq-item a:hover {
+            color: #4a8f4c;
+        }
+    </style>
+</body>
+</html>

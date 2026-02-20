@@ -530,3 +530,14 @@ footer {
         gap: 1rem;
     }
 }
+
+.faq-item a.info {
+    text-decoration: none;
+    color: var(--primary-color);
+    vertical-align: 6px;
+    font-size: 75%;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}

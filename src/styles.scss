@@ -442,6 +442,12 @@ header {
         gap            : 2rem;
     }
 
+    .menu-header {
+        display    : flex;
+        align-items: center;
+        gap        : 2rem;
+    }
+
     .sticky-menu-links {
         display    : flex;
         gap        : 2rem;
@@ -475,6 +481,41 @@ header {
     main {
         padding-top: 60px;
     }
+
+    // Burger menu - hidden on desktop
+    .burger-menu {
+        display       : none;
+        flex-direction: column;
+        gap           : 5px;
+        background    : transparent;
+        border        : none;
+        cursor        : pointer;
+        padding       : 5px;
+        z-index       : 1001;
+
+        span {
+            display         : block;
+            width           : 25px;
+            height          : 3px;
+            background-color: $text-light;
+            transition      : all 0.3s ease;
+            border-radius   : 2px;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(45deg) translate(7px, 7px);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+    }
 }
 
 /* Footer */
@@ -498,7 +539,60 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .sticky-menu {
-        display: none;
+        padding: 0.75rem 0;
+
+        .sticky-menu-content {
+            flex-direction: column;
+            align-items   : stretch;
+            gap           : 0;
+        }
+
+        .menu-header {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            width          : 100%;
+        }
+
+        .burger-menu {
+            display: flex;
+        }
+
+        .sticky-menu-links {
+            position      : relative;
+            top           : 0;
+            left          : 0;
+            right         : 0;
+            background    : transparent;
+            flex-direction: column;
+            gap           : 0;
+            align-items   : stretch;
+            padding       : 0;
+            max-height    : 0;
+            overflow      : hidden;
+            transition    : max-height 0.3s ease;
+            box-shadow    : none;
+            margin-top    : 0;
+
+            &.active {
+                max-height: 400px;
+                margin-top: 1rem;
+            }
+
+            a {
+                padding      : 0.75rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                text-align   : left;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .cta-btn {
+            display: none;
+        }
     }
 
     header {
@@ -508,6 +602,10 @@ footer {
 
         p {
             font-size: 1rem;
+        }
+
+        nav {
+            display: none;
         }
     }
 
@@ -533,42 +631,195 @@ footer {
 
 .faq-item a.info {
     text-decoration: none;
-    color: var(--primary-color);
-    vertical-align: 6px;
-    font-size: 75%;
-    
+    color          : var(--primary-color);
+    vertical-align : 6px;
+    font-size      : 75%;
+
     &:hover {
         text-decoration: underline;
     }
 }
 
 /* Pricing Page Styles */
+.pricing-cards {
+    display: none; // Masqué par défaut sur desktop
+}
+
+.pricing-card {
+    background   : white;
+    border-radius: 12px;
+    box-shadow   : 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow     : hidden;
+    transition   : transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform : translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    &.featured {
+        border  : 2px solid $primary-color;
+        position: relative;
+
+        &::before {
+            content    : "Populaire";
+            position   : absolute;
+            top        : 15px;
+            right      : -39px;
+            background : $primary-color;
+            color      : white;
+            padding    : 5px 40px;
+            transform  : rotate(45deg);
+            font-size  : 0.75rem;
+            font-weight: bold;
+            box-shadow : 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.pricing-card-header {
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+    color     : white;
+    padding   : 2rem 1.5rem;
+    text-align: center;
+
+    .pricing-name {
+        font-size     : 1.5rem;
+        font-weight   : 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom : 1rem;
+    }
+
+    .pricing-price {
+        font-size  : 2.5rem;
+        font-weight: 700;
+        margin     : 0.5rem 0;
+
+        a {
+            color          : white;
+            text-decoration: underline;
+            font-size      : 1rem;
+        }
+    }
+
+    .pricing-period {
+        font-size: 1rem;
+        opacity  : 0.9;
+    }
+}
+
+.pricing-card-features {
+    padding: 1.5rem;
+}
+
+.feature-item {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 0.75rem 0;
+    border-bottom  : 1px solid #e5e7eb;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &.not-included {
+        opacity: 0.5;
+    }
+
+    .feature-label {
+        flex       : 1;
+        text-align : left;
+        font-weight: 500;
+        font-size  : 0.95rem;
+    }
+
+    .feature-check {
+        color      : #10b981;
+        font-size  : 1.5rem;
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+
+    .feature-text {
+        color      : #374151;
+        font-size  : 0.9rem;
+        text-align : right;
+        margin-left: 1rem;
+
+        small {
+            display  : block;
+            font-size: 0.8rem;
+            color    : #6b7280;
+        }
+    }
+
+    .feature-none {
+        color      : #d1d5db;
+        font-size  : 1.3rem;
+        margin-left: 1rem;
+    }
+}
+
+.pricing-card-footer {
+    padding   : 1.5rem;
+    text-align: center;
+}
+
 .pricing-table-wrapper {
     overflow-x: auto;
-    margin: 2rem 0;
+    margin    : 2rem 0;
+    position  : relative;
 }
 
 .pricing-table {
-    width: 100%;
+    width          : 100%;
     border-collapse: collapse;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    background     : white;
+    box-shadow     : 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius  : 8px;
+    overflow       : hidden;
+    position       : relative;
 
     thead {
         background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
-        color: white;
+        color     : white;
     }
 
     th {
-        padding: 1.5rem 1rem;
-        text-align: center;
-        font-weight: 600;
+        padding       : 1.5rem 1rem;
+        text-align    : center;
+        font-weight   : 600;
         vertical-align: top;
+        position      : relative;
 
         &:first-child {
             background: transparent;
+        }
+
+        &.featured {
+            background: linear-gradient(135deg, lighten($primary-color, 5%) 0%, $primary-color 100%);
+            position  : relative;
+
+            &::before {
+                content       : "Populaire";
+                position      : absolute;
+                top           : 6px;
+                right         : -5px;
+                background    : #ffffff;
+                color         : #6b9571;
+                padding       : 2px 6px;
+                transform     : rotate(6deg);
+                font-size     : 0.6rem;
+                font-weight   : 700;
+                box-shadow    : 2px 2px 6px rgba(0, 0, 0, 0.2);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                z-index       : 1;
+                border-radius : 4px;
+            }
         }
     }
 
@@ -581,61 +832,61 @@ footer {
     }
 
     td {
-        padding: 1.25rem 1rem;
-        text-align: center;
+        padding       : 1.25rem 1rem;
+        text-align    : center;
         vertical-align: middle;
     }
 }
 
 .pricing-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: flex-start;
-    gap: 0.5rem;
-    height: 100%;
+    gap            : 0.5rem;
+    height         : 100%;
 }
 
 .pricing-name {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size     : 1.3rem;
+    font-weight   : 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .pricing-price {
-    font-size: 2rem;
+    font-size  : 2rem;
     font-weight: 700;
 
     a {
-        color: white;
+        color          : white;
         text-decoration: underline;
-        font-size: 14px;
+        font-size      : 14px;
     }
 }
 
 .pricing-period {
     font-size: 0.9rem;
-    opacity: 0.9;
+    opacity  : 0.9;
 
     a {
-        color: white;
+        color          : white;
         text-decoration: underline;
     }
 }
 
 .feature-name {
-    text-align: left;
+    text-align : left;
     font-weight: 500;
-    background: #f9fafb;
+    background : #f9fafb;
 }
 
 .feature-value {
     font-size: 0.95rem;
 
     &.included {
-        color: #10b981;
-        font-size: 1.5rem;
+        color      : #10b981;
+        font-size  : 1.5rem;
         font-weight: bold;
     }
 
@@ -643,55 +894,55 @@ footer {
         color: #d1d5db;
 
         &::before {
-            content: "—";
+            content  : "—";
             font-size: 1.2rem;
         }
     }
 
     small {
-        display: block;
-        font-size: 0.8rem;
-        color: #6b7280;
+        display   : block;
+        font-size : 0.8rem;
+        color     : #6b7280;
         margin-top: 0.25rem;
     }
 }
 
 .cta-row td {
-    padding: 1.5rem 1rem;
+    padding   : 1.5rem 1rem;
     background: #f9fafb;
 }
 
 .btn-block {
-    width: 100%;
-    padding: 0.75rem 1rem;
+    width          : 100%;
+    padding        : 0.75rem 1rem;
     text-decoration: none;
-    display: inline-block;
-    border-radius: 6px;
-    border: none;
-    font-weight: 600;
-    transition: all 0.2s;
+    display        : inline-block;
+    border-radius  : 6px;
+    border         : none;
+    font-weight    : 600;
+    transition     : all 0.2s;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
-    color: white;
+    color     : white;
 
     &:hover {
-        transform: translateY(-2px);
+        transform : translateY(-2px);
         box-shadow: 0 4px 12px rgba(107, 149, 113, 0.4);
-        color: white;
+        color     : white;
     }
 }
 
 .pricing-notes {
-    background: #f9fafb;
-    padding: 2rem;
+    background   : #f9fafb;
+    padding      : 2rem;
     border-radius: 8px;
-    border-left: 4px solid $primary-color;
+    border-left  : 4px solid $primary-color;
 
     h3 {
         margin-top: 0;
-        color: #1f2937;
+        color     : #1f2937;
     }
 
     ul {
@@ -700,22 +951,22 @@ footer {
 
     li {
         margin-bottom: 0.75rem;
-        color: #4b5563;
+        color        : #4b5563;
     }
 
     a {
-        color: $primary-color;
+        color          : $primary-color;
         text-decoration: underline;
     }
 }
 
 .info {
     text-decoration: none;
-    color: $primary-color;
-    margin-left: 0.25rem;
-    font-size: 0.9em;
-    opacity: 0.8;
-    transition: opacity 0.2s;
+    color          : $primary-color;
+    margin-left    : 0.25rem;
+    font-size      : 0.9em;
+    opacity        : 0.8;
+    transition     : opacity 0.2s;
 
     &:hover {
         opacity: 1;
@@ -723,28 +974,39 @@ footer {
 }
 
 .faq-item {
-    margin-bottom: 2rem;
+    margin-bottom : 2rem;
     padding-bottom: 1.5rem;
 
     &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
+        border-bottom : none;
+        margin-bottom : 0;
         padding-bottom: 0;
     }
 
     h3 {
-        color: #1f2937;
+        color        : #1f2937;
         margin-bottom: 1rem;
-        font-size: 1.3rem;
+        font-size    : 1.3rem;
     }
 
     p {
-        color: #4b5563;
+        color      : #4b5563;
         line-height: 1.7;
     }
 }
 
 @media (max-width: 768px) {
+
+    // Afficher les cartes sur mobile
+    .pricing-cards {
+        display: block;
+    }
+
+    // Masquer le tableau sur mobile
+    .pricing-table-wrapper {
+        display: none;
+    }
+
     .pricing-name {
         font-size: 1rem;
     }
@@ -755,7 +1017,7 @@ footer {
 
     .pricing-table th,
     .pricing-table td {
-        padding: 1rem 0.5rem;
+        padding  : 1rem 0.5rem;
         font-size: 0.85rem;
     }
 

@@ -30,16 +30,23 @@
     <nav class="sticky-menu visible" id="stickyMenu">
         <div class="container">
             <div class="sticky-menu-content">
-                <div class="sticky-menu-links">
+                <div class="menu-header">
                     <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
+                    <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="sticky-menu-links" id="menuLinks">
                     <a href="index.html#about">À propos</a>
                     <a href="index.html#usecases">Cas d'usage</a>
                     <a href="index.html#features">Fonctionnalités</a>
                     <a href="pricing.html">Tarifs</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="#contact">Contact</a>
+                    <a href="index.html#contact">Contact</a>
                 </div>
-                <a href="https://app.itinera.ag" class="btn btn-light btn-sm">Démarrer</a>
+                <a href="https://app.itinera.ag" class="btn btn-light btn-sm cta-btn">Démarrer</a>
             </div>
         </div>
     </nav>
@@ -291,6 +298,31 @@
                         target.scrollIntoView({ behavior: 'smooth' });
                     }
                 }
+            });
+        });
+
+        // Burger Menu Handler
+        const burgerMenu = document.getElementById('burgerMenu');
+        const menuLinks = document.getElementById('menuLinks');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            menuLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
+                menuLinks.classList.remove('active');
+                burgerMenu.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu after click
+        document.querySelectorAll('.sticky-menu-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuLinks.classList.remove('active');
+                burgerMenu.classList.remove('active');
             });
         });
     </script>

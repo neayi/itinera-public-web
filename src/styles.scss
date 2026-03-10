@@ -541,3 +541,225 @@ footer {
         text-decoration: underline;
     }
 }
+
+/* Pricing Page Styles */
+.pricing-table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+        background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+        color: white;
+    }
+
+    th {
+        padding: 1.5rem 1rem;
+        text-align: center;
+        font-weight: 600;
+        vertical-align: top;
+
+        &:first-child {
+            background: transparent;
+        }
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #e5e7eb;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    td {
+        padding: 1.25rem 1rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.pricing-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.pricing-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-price {
+    font-size: 2rem;
+    font-weight: 700;
+
+    a {
+        color: white;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+}
+
+.pricing-period {
+    font-size: 0.9rem;
+    opacity: 0.9;
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.feature-name {
+    text-align: left;
+    font-weight: 500;
+    background: #f9fafb;
+}
+
+.feature-value {
+    font-size: 0.95rem;
+
+    &.included {
+        color: #10b981;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    &.empty {
+        color: #d1d5db;
+
+        &::before {
+            content: "—";
+            font-size: 1.2rem;
+        }
+    }
+
+    small {
+        display: block;
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-top: 0.25rem;
+    }
+}
+
+.cta-row td {
+    padding: 1.5rem 1rem;
+    background: #f9fafb;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+    color: white;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(107, 149, 113, 0.4);
+        color: white;
+    }
+}
+
+.pricing-notes {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid $primary-color;
+
+    h3 {
+        margin-top: 0;
+        color: #1f2937;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-bottom: 0.75rem;
+        color: #4b5563;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
+
+.info {
+    text-decoration: none;
+    color: $primary-color;
+    margin-left: 0.25rem;
+    font-size: 0.9em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    h3 {
+        color: #1f2937;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    p {
+        color: #4b5563;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-name {
+        font-size: 1rem;
+    }
+
+    .pricing-price {
+        font-size: 1.5rem;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 1rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .feature-name {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarifs Itinera - Choisissez la formule adaptée à vos besoins.">
+    <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg">
+    <title>Tarifs - Itinera by neayi</title>
+    <link rel="icon" type="image/png" href="images/Itinera.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/styles.css">
+
+    <!-- Matomo -->
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//matomo.tripleperformance.fr/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '4']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+<body>
+    <nav class="sticky-menu visible" id="stickyMenu">
+        <div class="container">
+            <div class="sticky-menu-content">
+                <div class="sticky-menu-links">
+                    <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
+                    <a href="index.html#about">À propos</a>
+                    <a href="index.html#usecases">Cas d'usage</a>
+                    <a href="index.html#features">Fonctionnalités</a>
+                    <a href="pricing.html">Tarifs</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <a href="https://app.itinera.ag" class="btn btn-light btn-sm">Démarrer</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="about-section mt-5">
+            <div class="container">
+                <h1 style="margin-bottom: 3rem;">Tarifs</h1>
+                
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="pricing-tier">
+                                    <div class="pricing-header">
+                                        <div class="pricing-name">Découverte</div>
+                                        <div class="pricing-price">0€</div>
+                                        <div class="pricing-period">Gratuit</div>
+                                    </div>
+                                </th>
+                                <th class="pricing-tier">
+                                    <div class="pricing-header">
+                                        <div class="pricing-name">Agriculteur</div>
+                                        <div class="pricing-price">50€</div>
+                                        <div class="pricing-period">par an</div>
+                                    </div>
+                                </th>
+                                <th class="pricing-tier">
+                                    <div class="pricing-header">
+                                        <div class="pricing-name">Conseiller</div>
+                                        <div class="pricing-price">40€</div>
+                                        <div class="pricing-period">par mois</div>
+                                    </div>
+                                </th>
+                                <th class="pricing-tier">
+                                    <div class="pricing-header">
+                                        <div class="pricing-name">Entreprise</div>
+                                        <div class="pricing-price"><a href="#contact">Nous contacter</a></div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name">Possibilité d'explorer tous les systèmes publics</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Création de systèmes (via saisie, import ou génération automatique)</td>
+                                <td class="feature-value">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></td>
+                                <td class="feature-value">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></td>
+                                <td class="feature-value">Illimité</td>
+                                <td class="feature-value">Illimité</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Géolocalisation, diagramme ombrothermique, analyse de sol par API</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                                <td class="feature-value included">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Remplissage IA<a class="info" href="#pricing-concepts">🛈</a></td>
+                                <td class="feature-value">Limité à 10 cellules<br><small>(saisie manuelle possible)</small></td>
+                                <td class="feature-value">Illimité</td>
+                                <td class="feature-value">Illimité</td>
+                                <td class="feature-value">Illimité</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Indicateurs spécifiques<a class="info" href="#pricing-concepts">🛈</a></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value included">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Imports / exports avancés</td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value included">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Intégration avec vos outils</td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value empty"></td>
+                                <td class="feature-value included">✓</td>
+                            </tr>
+                            <tr class="cta-row">
+                                <td></td>
+                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
+                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
+                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
+                                <td><a href="#contact" class="btn btn-primary btn-block">Nous contacter</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-notes mt-5">
+                    <h3>Notes importantes</h3>
+                    <ul>
+                        <li>Tous les tarifs sont indiqués hors taxes</li>
+                        <li>Les formules payantes incluent un support prioritaire</li>
+                        <li>La formule Entreprise peut être adaptée à vos besoins spécifiques (nombre d'utilisateurs, indicateurs personnalisés, intégrations sur mesure)</li>
+                        <li>Pour les structures publiques, associations et projets de recherche, des tarifs préférentiels sont disponibles - <a href="#contact">contactez-nous</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="pricing-concepts">
+            <div class="container">
+                <h2>Pour en savoir plus</h2>
+
+                <div class="faq-item">
+                    <h3>Qu'est-ce qu'un système ?</h3>
+                    <p>Un système correspond à une rotation pour un type de sol/climat particulier - un agriculteur pourra avoir un système pour ses parcelles irriguées, un système pour les bonnes parcelles limoneuses et un système pour la parcelle de la grand-mère !</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Pourquoi est-ce payant d'utiliser le remplissage IA ?</h3>
+                    <p>Nous souhaitons qu'un maximum d'utilisateurs (en particulier agriculteurs) puissent modéliser leur système. Cependant les modèles LLM que nous utilisons ne sont pas gratuits !</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Vous avez besoin de nouveaux indicateurs ?</h3>
+                    <p>Nous pouvons nous intégrer avec des API tierces (satellites, ...) pour récupérer automatiquement des données qui sont pertinentes pour vos études. Nous pouvons aussi réfléchir ensemble à l'intégration d'indicateurs (STIR, foncier, etc...) - <a href="#contact">contactez-nous</a> !</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Restez informé</h2>
+                <p class="contact-intro">
+                    Intéressés par Itinera ? Prenez rendez-vous :
+                </p>
+                <form class="contact-form" id="contactForm">
+                    <div class="success-message" id="successMessage">
+                        Merci pour votre message ! Nous vous contacterons bientôt.
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError">Veuillez entrer votre nom</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Dites-nous en plus sur votre besoin !</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        // Form Validation and Submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
+
+            let isValid = true;
+
+            // Validate name
+            const name = document.getElementById('name');
+            if (name.value.trim() === '') {
+                document.getElementById('nameError').classList.add('show');
+                name.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                document.getElementById('emailError').classList.add('show');
+                email.classList.add('error');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Disable submit button to prevent double submission
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Envoi en cours...';
+
+                // Prepare form data
+                const formData = new FormData(this);
+
+                try {
+                    // Send form data to PHP script
+                    const response = await fetch('send-email.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        // Show success message
+                        document.getElementById('successMessage').classList.add('show');
+
+                        // Reset form
+                        this.reset();
+
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            document.getElementById('successMessage').classList.remove('show');
+                        }, 5000);
+                    } else {
+                        // Show error
+                        alert('Erreur: ' + result.message);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            }
+        });
+
+        // Remove error styling on input
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorId = this.id + 'Error';
+                const errorElement = document.getElementById(errorId);
+                if (errorElement) {
+                    errorElement.classList.remove('show');
+                }
+            });
+        });
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('.sticky-menu-links a, a.info').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

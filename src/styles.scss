@@ -1025,3 +1025,44 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+.faq-item {
+    margin-bottom : 3rem;
+    padding-bottom: 2rem;
+    border-bottom : 1px solid #e0e0e0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        color        : #2c5f2d;
+        font-size    : 1.5rem;
+        margin-bottom: 1rem;
+        text-align   : left;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        line-height  : 1.8;
+    }
+
+    ul {
+        margin-left  : 1.5rem;
+        margin-bottom: 1rem;
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height  : 1.8;
+        }
+    }
+
+    a {
+        color          : #2c5f2d;
+        text-decoration: underline;
+
+        &:hover {
+            color: #4a8f4c;
+        }
+    }
+}

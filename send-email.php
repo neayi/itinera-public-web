@@ -24,13 +24,21 @@ try {
     $dotenv->load();
     
     // Get and sanitize form data
-    $name = isset($_POST['name']) ? trim(strip_tags($_POST['name'])) : '';
+    $firstname = isset($_POST['firstname']) ? trim(strip_tags($_POST['firstname'])) : '';
+    $lastname = isset($_POST['lastname']) ? trim(strip_tags($_POST['lastname'])) : '';
     $email = isset($_POST['email']) ? trim(strip_tags($_POST['email'])) : '';
     $company = isset($_POST['company']) ? trim(strip_tags($_POST['company'])) : '';
     $message = isset($_POST['message']) ? trim(strip_tags($_POST['message'])) : '';
     
+    // Combine first and last name
+    $fullName = trim($firstname . ' ' . $lastname);
+    
     // Validate required fields
-    if (empty($name)) {
+    if (empty($firstname)) {
+        throw new Exception('Le prénom est requis');
+    }
+    
+    if (empty($lastname)) {
         throw new Exception('Le nom est requis');
     }
     
@@ -54,11 +62,11 @@ try {
     // Recipients
     $mail->setFrom($_ENV['BREVO_FROM_EMAIL'], $_ENV['BREVO_FROM_NAME']);
     $mail->addAddress($_ENV['CONTACT_EMAIL']);
-    $mail->addReplyTo($email, $name);
+    $mail->addReplyTo($email, $fullName);
     
     // Content
     $mail->isHTML(true);
-    $mail->Subject = 'Nouveau message depuis Itinera - ' . $name;
+    $mail->Subject = 'Nouveau message depuis Itinera - ' . $fullName;
     
     // Email body
     $htmlBody = "
@@ -81,8 +89,12 @@ try {
             </div>
             <div class='content'>
                 <div class='field'>
+                    <div class='label'>Prénom :</div>
+                    <div>" . htmlspecialchars($firstname) . "</div>
+                </div>
+                <div class='field'>
                     <div class='label'>Nom :</div>
-                    <div>" . htmlspecialchars($name) . "</div>
+                    <div>" . htmlspecialchars($lastname) . "</div>
                 </div>
                 <div class='field'>
                     <div class='label'>Email :</div>
@@ -119,7 +131,8 @@ try {
     
     // Plain text version
     $textBody = "Nouveau contact depuis Itinera\n\n";
-    $textBody .= "Nom : " . $name . "\n";
+    $textBody .= "Prénom : " . $firstname . "\n";
+    $textBody .= "Nom : " . $lastname . "\n";
     $textBody .= "Email : " . $email . "\n";
     if (!empty($company)) {
         $textBody .= "Entreprise : " . $company . "\n";

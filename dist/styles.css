@@ -264,6 +264,19 @@ header p {
   margin: 0 auto;
   padding: 0 20px;
 }
+.contact-section .form-row {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .contact-section .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.contact-section .form-row .form-group {
+  flex: 1;
+}
 .contact-section .form-group {
   margin-bottom: 1.5rem;
 }

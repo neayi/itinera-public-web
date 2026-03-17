@@ -1,1 +1,1 @@
-scp -r *.html *.php dist images neayi:/home/wkgv4271/itinera.ag/
+ssh neayi "cd itinera.ag && git pull && composer install --no-dev"

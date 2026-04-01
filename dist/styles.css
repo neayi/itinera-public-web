@@ -150,6 +150,9 @@ header p {
   border-radius: 10px;
   overflow: hidden;
 }
+.about-section .video-container iframe {
+  transform: scale(1.02);
+}
 
 /* Features Section */
 .features-section {

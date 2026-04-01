@@ -178,6 +178,10 @@ header {
         background-color: #f5f5f0;
         border-radius   : 10px;
         overflow        : hidden;
+        
+        iframe {
+            transform: scale(1.02);
+        }
     }
 }
 

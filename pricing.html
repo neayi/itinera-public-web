@@ -1,439 +1,501 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tarifs Itinera - Choisissez la formule adaptée à vos besoins.">
-    <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg">
-    <title>Tarifs - Itinera by neayi</title>
-    <link rel="icon" type="image/png" href="images/Itinera.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="dist/styles.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Tarifs Itinera - Choisissez la formule adaptée à vos besoins." />
+        <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg" />
+        <title>Tarifs - Itinera by neayi</title>
+        <link rel="icon" type="image/png" href="images/Itinera.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="dist/styles.css" />
 
-    <!-- Matomo -->
-    <script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u="//matomo.tripleperformance.fr/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '4']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-    </script>
-    <!-- End Matomo Code -->
-</head>
-<body>
-    <nav class="sticky-menu visible" id="stickyMenu">
-        <div class="container">
-            <div class="sticky-menu-content">
-                <div class="menu-header">
-                    <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
-                    <button class="burger-menu" id="burgerMenu" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <div class="sticky-menu-links" id="menuLinks">
-                    <a href="index.html#about">À propos</a>
-                    <a href="index.html#usecases">Cas d'usage</a>
-                    <a href="index.html#features">Fonctionnalités</a>
-                    <a href="pricing.html">Tarifs</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="index.html#contact">Contact</a>
-                </div>
-                <a href="https://app.itinera.ag" class="btn btn-light btn-sm cta-btn">Démarrer</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <section class="about-section mt-5">
+        <!-- Matomo -->
+        <script>
+            var _paq = (window._paq = window._paq || []);
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
+            (function () {
+                var u = "//matomo.tripleperformance.fr/";
+                _paq.push(["setTrackerUrl", u + "matomo.php"]);
+                _paq.push(["setSiteId", "4"]);
+                var d = document,
+                    g = d.createElement("script"),
+                    s = d.getElementsByTagName("script")[0];
+                g.async = true;
+                g.src = u + "matomo.js";
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <!-- End Matomo Code -->
+    </head>
+    <body>
+        <nav class="sticky-menu visible" id="stickyMenu">
             <div class="container">
-                <h1 style="margin-bottom: 3rem;">Tarifs</h1>
-                
-                <!-- Version mobile : Cartes -->
-                <div class="pricing-cards">
-                    <!-- Carte Découverte -->
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <h3 class="pricing-name">Découverte</h3>
-                            <div class="pricing-price">0€</div>
-                            <div class="pricing-period">Gratuit</div>
-                        </div>
-                        <div class="pricing-card-features">
-                            <div class="feature-item">
-                                <span class="feature-label">Exploration des systèmes publics</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Création de systèmes</span>
-                                <span class="feature-text">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Géolocalisation & analyse</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Remplissage IA</span>
-                                <span class="feature-text">Limité à 10 cellules<br><small>(saisie manuelle possible)</small></span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Questions sur le système<a class="info" href="#questions">🛈</a></span>
-                                <span class="feature-text">Limité à 10 questions</span>
-                            </div>
-                        </div>
-                        <div class="pricing-card-footer">
-                            <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
-                        </div>
+                <div class="sticky-menu-content">
+                    <div class="menu-header">
+                        <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo" /> Itinera</span>
+                        <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
-
-                    <!-- Carte Agriculteur -->
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <h3 class="pricing-name">Essentiel</h3>
-                            <div class="pricing-price">50€ HT</div>
-                            <div class="pricing-period">par an</div>
-                        </div>
-                        <div class="pricing-card-features">
-                            <div class="feature-item">
-                                <span class="feature-label">Exploration des systèmes publics</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Création de systèmes</span>
-                                <span class="feature-text">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Géolocalisation & analyse</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Remplissage IA</span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Questions sur le système<a class="info" href="#questions">🛈</a></span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                        </div>
-                        <div class="pricing-card-footer">
-                            <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
-                        </div>
+                    <div class="sticky-menu-links" id="menuLinks">
+                        <a href="index.html#about">À propos</a>
+                        <a href="index.html#usecases">Cas d'usage</a>
+                        <a href="index.html#features">Fonctionnalités</a>
+                        <a href="pricing.html">Tarifs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="index.html#contact">Contact</a>
                     </div>
-
-                    <!-- Carte Conseiller -->
-                    <div class="pricing-card featured">
-                        <div class="pricing-card-header">
-                            <h3 class="pricing-name">Premium</h3>
-                            <div class="pricing-price">40€ HT</div>
-                            <div class="pricing-period">par mois</div>
-                        </div>
-                        <div class="pricing-card-features">
-                            <div class="feature-item">
-                                <span class="feature-label">Exploration des systèmes publics</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Création de systèmes</span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Géolocalisation & analyse</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Remplissage IA</span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Questions sur le système<a class="info" href="#questions">🛈</a></span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                        </div>
-                        <div class="pricing-card-footer">
-                            <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
-                        </div>
-                    </div>
-
-                    <!-- Carte Entreprise -->
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <h3 class="pricing-name">Offre personnalisée</h3>
-                            <div class="pricing-price"><a href="index.html#contact">Nous contacter</a></div>
-                        </div>
-                        <div class="pricing-card-features">
-                            <div class="feature-item">
-                                <span class="feature-label">Exploration des systèmes publics</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Création de systèmes</span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Géolocalisation & analyse</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Remplissage IA</span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Questions sur le système<a class="info" href="#questions">🛈</a></span>
-                                <span class="feature-text">Illimité</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Indicateurs spécifiques<a class="info" href="#pricing-concepts">🛈</a></span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Imports / exports avancés</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-label">Intégration avec vos outils</span>
-                                <span class="feature-check">✓</span>
-                            </div>
-                        </div>
-                        <div class="pricing-card-footer">
-                            <a href="index.html#contact" class="btn btn-primary btn-block">Nous contacter</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Version desktop : Tableau -->
-                <div class="pricing-table-wrapper">
-                    <table class="pricing-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="pricing-tier">
-                                    <div class="pricing-header">
-                                        <div class="pricing-name">Découverte</div>
-                                        <div class="pricing-price">0€</div>
-                                        <div class="pricing-period">Gratuit</div>
-                                    </div>
-                                </th>
-                                <th class="pricing-tier">
-                                    <div class="pricing-header">
-                                        <div class="pricing-name px-2">Essentiel</div>
-                                        <div class="pricing-price">50€ HT</div>
-                                        <div class="pricing-period">par an</div>
-                                    </div>
-                                </th>
-                                <th class="pricing-tier featured">
-                                    <div class="pricing-header">
-                                        <div class="pricing-name">Premium</div>
-                                        <div class="pricing-price">40€ HT</div>
-                                        <div class="pricing-period">par mois</div>
-                                    </div>
-                                </th>
-                                <th class="pricing-tier">
-                                    <div class="pricing-header">
-                                        <div class="pricing-name">Offre personnalisée</div>
-                                        <div class="pricing-price"><a href="#contact">Nous contacter</a></div>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="feature-name">Possibilité d'explorer tous les systèmes publics</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Création de systèmes (via saisie, import ou génération automatique)</td>
-                                <td class="feature-value">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></td>
-                                <td class="feature-value">5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></td>
-                                <td class="feature-value">Illimité</td>
-                                <td class="feature-value">Illimité</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Géolocalisation, diagramme ombrothermique, analyse de sol par API</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                                <td class="feature-value included">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Remplissage IA</td>
-                                <td class="feature-value">Limité à 10 cellules<br><small>(saisie manuelle possible)</small></td>
-                                <td class="feature-value">Illimité</td>
-                                <td class="feature-value">Illimité</td>
-                                <td class="feature-value">Illimité</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Questions sur le système<a class="info" href="#questions">🛈</a></td>
-                                <td class="feature-value">Limité à 10 questions</td>
-                                <td class="feature-value">Illimité</td>
-                                <td class="feature-value">Illimité</td>
-                                <td class="feature-value">Illimité</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Indicateurs spécifiques<a class="info" href="#pricing-concepts">🛈</a></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value included">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Imports / exports avancés</td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value included">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Intégration avec vos outils</td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value empty"></td>
-                                <td class="feature-value included">✓</td>
-                            </tr>
-                            <tr class="cta-row">
-                                <td></td>
-                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
-                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
-                                <td><a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a></td>
-                                <td><a href="#contact" class="btn btn-primary btn-block">Nous contacter</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="pricing-notes mt-5">
-                    <h3>Notes importantes</h3>
-                    <ul>
-                        <li>Tous les tarifs sont indiqués hors taxes</li>
-                        <li>Les formules payantes incluent un support prioritaire</li>
-                        <li>La formule "Offre personnalisée" peut être adaptée à vos besoins spécifiques (nombre d'utilisateurs, indicateurs personnalisés, intégrations sur mesure)</li>
-                        <li>Pour les structures publiques, associations et projets de recherche, des tarifs préférentiels sont disponibles - <a href="#contact">contactez-nous</a></li>
-                    </ul>
+                    <a href="https://app.itinera.ag" class="btn btn-light btn-sm cta-btn">Démarrer</a>
                 </div>
             </div>
-        </section>
+        </nav>
+        <main>
+            <section class="about-section mt-5">
+                <div class="container">
+                    <h1 style="margin-bottom: 3rem">Tarifs</h1>
 
-        <section class="about-section" id="pricing-concepts">
-            <div class="container">
-                <h2>Pour en savoir plus</h2>
+                    <!-- Version mobile : Cartes -->
+                    <div class="pricing-cards">
+                        <!-- Carte Découverte -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-header">
+                                <h3 class="pricing-name">Découverte</h3>
+                                <div class="pricing-price">0€</div>
+                                <div class="pricing-period">Gratuit</div>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div class="feature-item">
+                                    <span class="feature-label">Exploration des systèmes publics</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Création de systèmes</span>
+                                    <span class="feature-text"
+                                        >5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></span
+                                    >
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Géolocalisation & analyse</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Remplissage IA</span>
+                                    <span class="feature-text"
+                                        >Limité à 10 cellules<br /><small>(saisie manuelle possible)</small></span
+                                    >
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label"
+                                        >Questions sur le système<a class="info" href="#questions">🛈</a></span
+                                    >
+                                    <span class="feature-text">Limité à 10 questions</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card-footer">
+                                <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                            </div>
+                        </div>
 
-                <div class="faq-item">
-                    <h3>Qu'est-ce qu'un système ?</h3>
-                    <p>Un système correspond à une rotation pour un type de sol/climat particulier - un agriculteur pourra avoir un système pour ses parcelles irriguées, un système pour les bonnes parcelles limoneuses et un système pour la parcelle de la grand-mère !</p>
-                </div>
+                        <!-- Carte Agriculteur -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-header">
+                                <h3 class="pricing-name">Essentiel</h3>
+                                <div class="pricing-price">50€ HT</div>
+                                <div class="pricing-period">par an</div>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div class="feature-item">
+                                    <span class="feature-label">Exploration des systèmes publics</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Création de systèmes</span>
+                                    <span class="feature-text"
+                                        >5 systèmes max<a class="info" href="#pricing-concepts">🛈</a></span
+                                    >
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Géolocalisation & analyse</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Remplissage IA</span>
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label"
+                                        >Questions sur le système<a class="info" href="#questions">🛈</a></span
+                                    >
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card-footer">
+                                <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                            </div>
+                        </div>
 
-                <div class="faq-item" id="questions">
-                    <h3>Quelles questions peut-on poser sur le système ?</h3>
-                    <p>Vous pouvez utiliser Itinera pour analyser ou faire évoluer votre système : "Analyse la stratégie de désherbage", "Identifie les risques sur la partie réglementaire", "Remplace le colza par du pois chiche", etc...</p>
-                </div>
+                        <!-- Carte Conseiller -->
+                        <div class="pricing-card featured">
+                            <div class="pricing-card-header">
+                                <h3 class="pricing-name">Premium</h3>
+                                <div class="pricing-price">40€ HT</div>
+                                <div class="pricing-period">par mois</div>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div class="feature-item">
+                                    <span class="feature-label">Exploration des systèmes publics</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Création de systèmes</span>
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Géolocalisation & analyse</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Remplissage IA</span>
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label"
+                                        >Questions sur le système<a class="info" href="#questions">🛈</a></span
+                                    >
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card-footer">
+                                <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                            </div>
+                        </div>
 
-                <div class="faq-item">
-                    <h3>Vous avez besoin de nouveaux indicateurs ?</h3>
-                    <p>Nous pouvons nous intégrer avec des API tierces (satellites, ...) pour récupérer automatiquement des données qui sont pertinentes pour vos études. Nous pouvons aussi réfléchir ensemble à l'intégration de nouveaux indicateurs (STIR, foncier, etc...) ou bien de rapports spécifiques - <a href="#contact">contactez-nous</a> !</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <h2>Restez informé</h2>
-                <p class="contact-intro">
-                    Intéressés par Itinera ? Prenez rendez-vous :
-                </p>
-                <form class="contact-form" id="contactForm">
-                    <div class="success-message" id="successMessage">
-                        Merci pour votre message ! Nous vous contacterons bientôt.
+                        <!-- Carte Entreprise -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-header">
+                                <h3 class="pricing-name">Offre personnalisée</h3>
+                                <div class="pricing-price"><a href="index.html#contact">Nous contacter</a></div>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div class="feature-item">
+                                    <span class="feature-label">Exploration des systèmes publics</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Création de systèmes</span>
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Géolocalisation & analyse</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Remplissage IA</span>
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label"
+                                        >Questions sur le système<a class="info" href="#questions">🛈</a></span
+                                    >
+                                    <span class="feature-text">Illimité</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label"
+                                        >Indicateurs spécifiques<a class="info" href="#pricing-concepts">🛈</a></span
+                                    >
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Imports / exports avancés</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-label">Intégration avec vos outils</span>
+                                    <span class="feature-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card-footer">
+                                <a href="index.html#contact" class="btn btn-primary btn-block">Nous contacter</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-row">
+
+                    <!-- Version desktop : Tableau -->
+                    <div class="pricing-table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="pricing-tier">
+                                        <div class="pricing-header">
+                                            <div class="pricing-name">Découverte</div>
+                                            <div class="pricing-price">0€</div>
+                                            <div class="pricing-period">Gratuit</div>
+                                        </div>
+                                    </th>
+                                    <th class="pricing-tier">
+                                        <div class="pricing-header">
+                                            <div class="pricing-name px-2">Essentiel</div>
+                                            <div class="pricing-price">50€ HT</div>
+                                            <div class="pricing-period">par an</div>
+                                        </div>
+                                    </th>
+                                    <th class="pricing-tier featured">
+                                        <div class="pricing-header">
+                                            <div class="pricing-name">Premium</div>
+                                            <div class="pricing-price">40€ HT</div>
+                                            <div class="pricing-period">par mois</div>
+                                        </div>
+                                    </th>
+                                    <th class="pricing-tier">
+                                        <div class="pricing-header">
+                                            <div class="pricing-name">Offre personnalisée</div>
+                                            <div class="pricing-price"><a href="#contact">Nous contacter</a></div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="feature-name">Possibilité d'explorer tous les systèmes publics</td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">
+                                        Création de systèmes (via saisie, import ou génération automatique)
+                                    </td>
+                                    <td class="feature-value">
+                                        5 systèmes max<a class="info" href="#pricing-concepts">🛈</a>
+                                    </td>
+                                    <td class="feature-value">
+                                        5 systèmes max<a class="info" href="#pricing-concepts">🛈</a>
+                                    </td>
+                                    <td class="feature-value">Illimité</td>
+                                    <td class="feature-value">Illimité</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">
+                                        Géolocalisation, diagramme ombrothermique, analyse de sol par API
+                                    </td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                    <td class="feature-value included">✓</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Remplissage IA</td>
+                                    <td class="feature-value">
+                                        Limité à 10 cellules<br /><small>(saisie manuelle possible)</small>
+                                    </td>
+                                    <td class="feature-value">Illimité</td>
+                                    <td class="feature-value">Illimité</td>
+                                    <td class="feature-value">Illimité</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">
+                                        Questions sur le système<a class="info" href="#questions">🛈</a>
+                                    </td>
+                                    <td class="feature-value">Limité à 10 questions</td>
+                                    <td class="feature-value">Illimité</td>
+                                    <td class="feature-value">Illimité</td>
+                                    <td class="feature-value">Illimité</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">
+                                        Indicateurs spécifiques<a class="info" href="#pricing-concepts">🛈</a>
+                                    </td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value included">✓</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Imports / exports avancés</td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value included">✓</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Intégration avec vos outils</td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value empty"></td>
+                                    <td class="feature-value included">✓</td>
+                                </tr>
+                                <tr class="cta-row">
+                                    <td></td>
+                                    <td>
+                                        <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                                    </td>
+                                    <td>
+                                        <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                                    </td>
+                                    <td>
+                                        <a href="https://app.itinera.ag" class="btn btn-primary btn-block">Commencer</a>
+                                    </td>
+                                    <td><a href="#contact" class="btn btn-primary btn-block">Nous contacter</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pricing-notes mt-5">
+                        <h3>Notes importantes</h3>
+                        <ul>
+                            <li>Tous les tarifs sont indiqués hors taxes</li>
+                            <li>Les formules payantes incluent un support prioritaire</li>
+                            <li>
+                                La formule "Offre personnalisée" peut être adaptée à vos besoins spécifiques (nombre
+                                d'utilisateurs, indicateurs personnalisés, intégrations sur mesure)
+                            </li>
+                            <li>
+                                Pour les structures publiques, associations et projets de recherche, des tarifs
+                                préférentiels sont disponibles - <a href="#contact">contactez-nous</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section" id="pricing-concepts">
+                <div class="container">
+                    <h2>Pour en savoir plus</h2>
+
+                    <div class="faq-item">
+                        <h3>Qu'est-ce qu'un système ?</h3>
+                        <p>
+                            Un système correspond à une rotation pour un type de sol/climat particulier - un agriculteur
+                            pourra avoir un système pour ses parcelles irriguées, un système pour les bonnes parcelles
+                            limoneuses et un système pour la parcelle de la grand-mère !
+                        </p>
+                    </div>
+
+                    <div class="faq-item" id="questions">
+                        <h3>Quelles questions peut-on poser sur le système ?</h3>
+                        <p>
+                            Vous pouvez utiliser Itinera pour analyser ou faire évoluer votre système : "Analyse la
+                            stratégie de désherbage", "Identifie les risques sur la partie réglementaire", "Remplace le
+                            colza par du pois chiche", etc...
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Vous avez besoin de nouveaux indicateurs ?</h3>
+                        <p>
+                            Nous pouvons nous intégrer avec des API tierces (satellites, ...) pour récupérer
+                            automatiquement des données qui sont pertinentes pour vos études. Nous pouvons aussi
+                            réfléchir ensemble à l'intégration de nouveaux indicateurs (STIR, foncier, etc...) ou bien
+                            de rapports spécifiques - <a href="#contact">contactez-nous</a> !
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <h2>Restez informé</h2>
+                    <p class="contact-intro">Intéressés par Itinera ? Prenez rendez-vous :</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="success-message" id="successMessage">
+                            Merci pour votre message ! Nous vous contacterons bientôt.
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" name="firstname" required />
+                                <span class="error-message" id="firstnameError">Veuillez entrer votre prénom</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" name="lastname" required />
+                                <span class="error-message" id="lastnameError">Veuillez entrer votre nom</span>
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label for="firstname">Prénom *</label>
-                            <input type="text" id="firstname" name="firstname" required>
-                            <span class="error-message" id="firstnameError">Veuillez entrer votre prénom</span>
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required />
+                            <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
                         </div>
                         <div class="form-group">
-                            <label for="lastname">Nom *</label>
-                            <input type="text" id="lastname" name="lastname" required>
-                            <span class="error-message" id="lastnameError">Veuillez entrer votre nom</span>
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company" />
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Entreprise</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Dites-nous en plus sur votre besoin !</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Envoyer</button>
-                </form>
+                        <div class="form-group">
+                            <label for="message">Dites-nous en plus sur votre besoin !</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
-        </div>
-    </footer>
+        <!-- Contact Form Handler -->
+        <script src="js/contact-form.js"></script>
 
-    <!-- Contact Form Handler -->
-    <script src="js/contact-form.js"></script>
-
-    <script>
-        // Smooth scroll behavior for anchor links
-        document.querySelectorAll('.sticky-menu-links a, a.info').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
+        <script>
+            // Smooth scroll behavior for anchor links
+            document.querySelectorAll(".sticky-menu-links a, a.info").forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    const href = link.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                        }
                     }
+                });
+            });
+
+            // Burger Menu Handler
+            const burgerMenu = document.getElementById("burgerMenu");
+            const menuLinks = document.getElementById("menuLinks");
+
+            burgerMenu.addEventListener("click", () => {
+                burgerMenu.classList.toggle("active");
+                menuLinks.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
                 }
             });
-        });
 
-        // Burger Menu Handler
-        const burgerMenu = document.getElementById('burgerMenu');
-        const menuLinks = document.getElementById('menuLinks');
-
-        burgerMenu.addEventListener('click', () => {
-            burgerMenu.classList.toggle('active');
-            menuLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
-                menuLinks.classList.remove('active');
-                burgerMenu.classList.remove('active');
-            }
-        });
-
-        // Close mobile menu after click
-        document.querySelectorAll('.sticky-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuLinks.classList.remove('active');
-                burgerMenu.classList.remove('active');
+            // Close mobile menu after click
+            document.querySelectorAll(".sticky-menu-links a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                });
             });
-        });
-    </script>
+        </script>
 
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5882962.js"></script>
-    <!-- End of HubSpot Embed Code -->        
-</body>
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5882962.js"></script>
+        <!-- End of HubSpot Embed Code -->
+    </body>
 </html>

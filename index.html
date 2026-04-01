@@ -1,357 +1,456 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Itinera - L’outil collaboratif pour imaginer, simuler et piloter les transitions agricoles.">
-    <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg">
-    <title>Itinera by neayi</title>
-    <link rel="icon" type="image/png" href="images/Itinera.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="dist/styles.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Itinera - L’outil collaboratif pour imaginer, simuler et piloter les transitions agricoles."
+        />
+        <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg" />
+        <title>Itinera by neayi</title>
+        <link rel="icon" type="image/png" href="images/Itinera.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="dist/styles.css" />
 
-    <!-- Matomo -->
-    <script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u="//matomo.tripleperformance.fr/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '4']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-    </script>
-    <!-- End Matomo Code -->
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</h1>
-            <p>L’outil collaboratif pour <b>imaginer</b>, <b>simuler</b> et <b>piloter</b> les transitions agricoles.</p>
-        </div>
-    </header>
-    <nav class="sticky-menu" id="stickyMenu">
-        <div class="container">
-            <div class="sticky-menu-content">
-                <div class="menu-header">
-                    <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo"> Itinera</span>
-                    <button class="burger-menu" id="burgerMenu" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <div class="sticky-menu-links" id="menuLinks">
-                    <a href="#about">À propos</a>
-                    <a href="#usecases">Cas d'usage</a>
-                    <a href="#features">Fonctionnalités</a>
-                    <a href="pricing.html">Tarifs</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <a href="https://app.itinera.ag" class="btn btn-light btn-sm cta-btn">Démarrer</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <section class="about-section" id="about">
+        <!-- Matomo -->
+        <script>
+            var _paq = (window._paq = window._paq || []);
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
+            (function () {
+                var u = "//matomo.tripleperformance.fr/";
+                _paq.push(["setTrackerUrl", u + "matomo.php"]);
+                _paq.push(["setSiteId", "4"]);
+                var d = document,
+                    g = d.createElement("script"),
+                    s = d.getElementsByTagName("script")[0];
+                g.async = true;
+                g.src = u + "matomo.js";
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <!-- End Matomo Code -->
+    </head>
+    <body>
+        <header>
             <div class="container">
-                <h2>Qu'est-ce qu'Itinera ?</h2>
-                <div class="row g-4 mb-4">
-                    <div class="col-12 col-lg-8 mx-auto">
-                        <p><b>Itinera</b> est une plateforme web qui permet de modéliser les Itineraires techniques agricoles sous forme <b>visuelle</b>, d’évaluer leur
-                            triple performance <b>technique</b>, <b>économique</b> et <b>environnementale</b>, et de simuler des évolutions.</p>
-                        <p>Grâce à l’intégration de l’<b>intelligence artificielle</b>, la saisie et les calculs sont <b>accélérés</b>, et chaque système de culture devient
-                            <b>analysable et exploitable</b> : risques phytosanitaires, cohérence des apports, efficience économique…</p>
-                        <p>En capitalisant toutes les simulations dans un <b>corpus géolocalisé et contextualisé</b>, Itinera ouvre la voie à une <b>nouvelle génération de conseil
-                            agricole assisté par IA</b> : des Itineraires de référence, adaptés à chaque territoire, chaque culture, chaque stratégie.</p>
-                    </div>
-                </div>
-
-                <div class="row g-4 mb-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>🌱 Modélisation visuelle</h3>
-                            <p>Visualisez chaque étape du système cultural à partir de la rotation de l'agriculteur</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>📊 Simulation intelligente</h3>
-                            <p>Testez des évolutions — rotations, variétés, pratiques — en temps réel</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>💯 Analyse triple performance</h3>
-                            <p>Mesurez instantanément l'impact technique, économique et environnemental</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 offset-lg-4">
-                        <div class="feature-card">
-                            <h3>🤝 Décision éclairée</h3>
-                            <p>Accompagnez les transitions agricoles du diagnostic à l'action</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 id="usecases">Cas d'usage</h2>
-                <div class="row g-4 mb-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>👨‍🌾 Agriculteurs</h3>
-                            <p>Analyser rapidement son propre système pour comprendre les coûts, émissions et impact environnemental de chaque opération. Se comparer avec des moyennes et identifier des voies d'amélioration.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>👥 Conseillers</h3>
-                            <p>Susciter une rencontre avec vos agriculteurs pour analyser leur système et leur proposer des évolutions.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>📚 Formation</h3>
-                            <p>Utiliser les Itineraires pré-enregistrés pour expliquer en séance l'impact de tel ou tel cahier des charges ou de telle ou telle opération en terme de marge.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>🔬 Projets de recherche</h3>
-                            <p>Diffuser les indicateurs technico économiques des systèmes étudiés, pour permettre aux agriculteurs et conseillers d'y accéder facilement et de s'y comparer.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>🏢 Filières</h3>
-                            <p>Faire des simulations avec vos agriculteurs pour valider la pertinence d'intégrer une nouvelle production ou un nouveau cahier des charges dans leur système.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <h3>🤝 Accompagnement</h3>
-                            <p>Établir un état des lieux de départ de l'agriculteur rapidement pour construire avec lui les voies d'amélioration. Intégrer les données dans un système de suivi du progrès des programmes d'accompagnement.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-lg-12 mx-auto">
-                        <div class="ratio video-container" style="--bs-aspect-ratio: 56.25%;">
-                            <iframe
-                                src="https://www.youtube.com/embed/FgdNTJAX8VI?autoplay=1&mute=1&loop=1&playlist=FgdNTJAX8VI&controls=1&rel=0&modestbranding=1&color=white&cc_load_policy=1&cc_lang_pref=fr"
-                                title="Présentation Itinera"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="features-section" id="features">
-            <div class="container">
-                <h2>Fonctionnalités de la plateforme</h2>
-
-                <!-- Feature 1 -->
-                <div class="feature-item">
-                    <div class="feature-content">
-                        <h3>Modélise tous les systèmes, de la rotation sur 7 ans à la viti/arbo</h3>
-                        <p>La description se fait en langage naturel, avec simplement la liste des productions et des interventions</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/1 - Modelise.png" alt="Modélisation des systèmes">
-                    </div>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-item reverse">
-                    <div class="feature-content">
-                        <h3>Calcule plus de 20 indicateurs à la parcelle, de l'IFT à la marge, en passant par l'EIQ et le temps de travail</h3>
-                        <p>Besoin d'un indicateur pas encore présent ? Contactez-nous !</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/2 - Calcul de nombreux indicateurs.png" alt="Calcul des indicateurs">
-                    </div>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-item">
-                    <div class="feature-content">
-                        <h3>Saisie et recherche dans les référentiels facilitées grâce à l'IA</h3>
-                        <p>Plutôt que de passer des heures dans les barèmes, référentiels et autres PDF, laissez l'IA le faire pour vous. Pas de panique si il lui manque des infos, on peut ajouter des précisions après coup.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/3 - Saisie assistée par IA.png" alt="Saisie assistée par IA">
-                    </div>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-item reverse">
-                    <div class="feature-content">
-                        <h3>Analyse du système par IA (risques, optimisations, ...)</h3>
-                        <p>L'assistant IA peut lire l'ensemble du système et agir dessus : changement de cahier des charges, vérification de la cohérence, ajout d'une production, etc… Vous pouvez aussi demander à l'IA ce qu'elle en pense en terme de risque sur tel ou tel ravageur.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/4 - Analyse du système par IA.png" alt="Analyse par IA">
-                    </div>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="feature-item">
-                    <div class="feature-content">
-                        <h3>Comparaison avec des variations du système, ainsi qu'avec les systèmes documentés dans les projets de recherche</h3>
-                        <p>Il est possible de faire des copies du système pour tester des modifications (reconceptions, optimisation, …) et voir ce que ça donne en terme économique, mais aussi en terme d'impact environnemental ou sur le temps de travail….</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/5 - Comparaison des variantes.png" alt="Comparaison des variantes">
-                    </div>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="feature-item reverse">
-                    <div class="feature-content">
-                        <h3>Géolocalisation et taxonomie</h3>
-                        <p>Tous les systèmes dans Itinera sont géolocalisés, et associés à quelques mots clés qui permettent de rapidement filtrer les systèmes pour comparer par production, cahier des charges ou territoire…</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/6 - Géolocalisation et taxonomie.png" alt="Géolocalisation et taxonomie">
-                    </div>
-                </div>
-
-                <!-- Feature 7 -->
-                <div class="feature-item">
-                    <div class="feature-content">
-                        <h3>Partage avancés des systèmes</h3>
-                        <p>Une fois vos systèmes proprement documentés, il est possible de le partager pour que les autres utilisateurs d'Itinera puissent le consulter. Vous pouvez même indiquer une URL sur un site tiers (Ecophyto, Triple Performance, Youtube) pour documenter plus longuement la stratégie de l'agriculteur.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/7 - Droits et partage avancé.png" alt="Partage des systèmes">
-                    </div>
-                </div>
-
-                <!-- Feature 8 -->
-                <div class="feature-item reverse">
-                    <div class="feature-content">
-                        <h3>Conçu pour s'intégrer facilement avec les systèmes de gestion parcellaires</h3>
-                        <p>Itinera se veut un système ouvert. Il permet d'importer facilement des données issues de Triple Performance, Systerre, Assolia, et de tout système capable d'exporter au format eDaplos. Si vous avez d'autres besoins, contactez-nous !</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/features/8 - Intégration avec de nombreux systèmes.png" alt="Intégration avec d'autres systèmes">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <h2>Restez informé</h2>
-                <p class="contact-intro">
-                    Intéressés par Itinera ? Prenez rendez-vous :
+                <h1><img src="images/Itinera.svg" alt="Itinera Logo" /> Itinera</h1>
+                <p>
+                    L’outil collaboratif pour <b>imaginer</b>, <b>simuler</b> et <b>piloter</b> les transitions
+                    agricoles.
                 </p>
-                <form class="contact-form" id="contactForm">
-                    <div class="success-message" id="successMessage">
-                        Merci pour votre message ! Nous vous contacterons bientôt.
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstname">Prénom *</label>
-                            <input type="text" id="firstname" name="firstname" required>
-                            <span class="error-message" id="firstnameError">Veuillez entrer votre prénom</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">Nom *</label>
-                            <input type="text" id="lastname" name="lastname" required>
-                            <span class="error-message" id="lastnameError">Veuillez entrer votre nom</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Entreprise</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Dites-nous en plus sur votre besoin !</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Envoyer</button>
-                </form>
             </div>
-        </section>
-    </main>
+        </header>
+        <nav class="sticky-menu" id="stickyMenu">
+            <div class="container">
+                <div class="sticky-menu-content">
+                    <div class="menu-header">
+                        <span class="logo"><img src="images/Itinera.svg" alt="Itinera Logo" /> Itinera</span>
+                        <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="sticky-menu-links" id="menuLinks">
+                        <a href="#about">À propos</a>
+                        <a href="#usecases">Cas d'usage</a>
+                        <a href="#features">Fonctionnalités</a>
+                        <a href="pricing.html">Tarifs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <a href="https://app.itinera.ag" class="btn btn-light btn-sm cta-btn">Démarrer</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="about-section" id="about">
+                <div class="container">
+                    <h2>Qu'est-ce qu'Itinera ?</h2>
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-lg-8 mx-auto">
+                            <p>
+                                <b>Itinera</b> est une plateforme web qui permet de modéliser les Itineraires techniques
+                                agricoles sous forme <b>visuelle</b>, d’évaluer leur triple performance
+                                <b>technique</b>, <b>économique</b> et <b>environnementale</b>, et de simuler des
+                                évolutions.
+                            </p>
+                            <p>
+                                Grâce à l’intégration de l’<b>intelligence artificielle</b>, la saisie et les calculs
+                                sont <b>accélérés</b>, et chaque système de culture devient
+                                <b>analysable et exploitable</b> : risques phytosanitaires, cohérence des apports,
+                                efficience économique…
+                            </p>
+                            <p>
+                                En capitalisant toutes les simulations dans un
+                                <b>corpus géolocalisé et contextualisé</b>, Itinera ouvre la voie à une
+                                <b>nouvelle génération de conseil agricole assisté par IA</b> : des Itineraires de
+                                référence, adaptés à chaque territoire, chaque culture, chaque stratégie.
+                            </p>
+                        </div>
+                    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
-        </div>
-    </footer>
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>🌱 Modélisation visuelle</h3>
+                                <p>
+                                    Visualisez chaque étape du système cultural à partir de la rotation de l'agriculteur
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>📊 Simulation intelligente</h3>
+                                <p>Testez des évolutions — rotations, variétés, pratiques — en temps réel</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>💯 Analyse triple performance</h3>
+                                <p>Mesurez instantanément l'impact technique, économique et environnemental</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-4">
+                            <div class="feature-card">
+                                <h3>🤝 Décision éclairée</h3>
+                                <p>Accompagnez les transitions agricoles du diagnostic à l'action</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Contact Form Handler -->
-    <script src="js/contact-form.js"></script>
+                    <h2 id="usecases">Cas d'usage</h2>
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>👨‍🌾 Agriculteurs</h3>
+                                <p>
+                                    Analyser rapidement son propre système pour comprendre les coûts, émissions et
+                                    impact environnemental de chaque opération. Se comparer avec des moyennes et
+                                    identifier des voies d'amélioration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>👥 Conseillers</h3>
+                                <p>
+                                    Susciter une rencontre avec vos agriculteurs pour analyser leur système et leur
+                                    proposer des évolutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>📚 Formation</h3>
+                                <p>
+                                    Utiliser les Itineraires pré-enregistrés pour expliquer en séance l'impact de tel ou
+                                    tel cahier des charges ou de telle ou telle opération en terme de marge.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>🔬 Projets de recherche</h3>
+                                <p>
+                                    Diffuser les indicateurs technico économiques des systèmes étudiés, pour permettre
+                                    aux agriculteurs et conseillers d'y accéder facilement et de s'y comparer.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>🏢 Filières</h3>
+                                <p>
+                                    Faire des simulations avec vos agriculteurs pour valider la pertinence d'intégrer
+                                    une nouvelle production ou un nouveau cahier des charges dans leur système.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="feature-card">
+                                <h3>🤝 Accompagnement</h3>
+                                <p>
+                                    Établir un état des lieux de départ de l'agriculteur rapidement pour construire avec
+                                    lui les voies d'amélioration. Intégrer les données dans un système de suivi du
+                                    progrès des programmes d'accompagnement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    <script>
-        // Sticky Menu Handler
-        const stickyMenu = document.getElementById('stickyMenu');
-        const header = document.querySelector('header');
+                    <div class="row">
+                        <div class="col-12 col-lg-12 mx-auto">
+                            <div class="ratio video-container" style="--bs-aspect-ratio: 56.25%">
+                                <iframe
+                                    src="https://www.youtube.com/embed/FgdNTJAX8VI?autoplay=1&mute=1&loop=1&playlist=FgdNTJAX8VI&controls=1&rel=0&modestbranding=1&color=white&cc_load_policy=1&cc_lang_pref=fr"
+                                    title="Présentation Itinera"
+                                    allow="
+                                        accelerometer;
+                                        autoplay;
+                                        clipboard-write;
+                                        encrypted-media;
+                                        gyroscope;
+                                        picture-in-picture;
+                                    "
+                                    allowfullscreen
+                                >
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        window.addEventListener('scroll', () => {
-            const headerBottom = header.offsetHeight;
-            const scrollTop = window.scrollY;
+            <section class="features-section" id="features">
+                <div class="container">
+                    <h2>Fonctionnalités de la plateforme</h2>
 
-            if (scrollTop > headerBottom) {
-                stickyMenu.classList.add('visible');
-            } else {
-                stickyMenu.classList.remove('visible');
-            }
-        });
+                    <!-- Feature 1 -->
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <h3>Modélise tous les systèmes, de la rotation sur 7 ans à la viti/arbo</h3>
+                            <p>
+                                La description se fait en langage naturel, avec simplement la liste des productions et
+                                des interventions
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="images/features/1 - Modelise.png" alt="Modélisation des systèmes" />
+                        </div>
+                    </div>
 
-        // Smooth scroll behavior for anchor links
-        document.querySelectorAll('.sticky-menu-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    <!-- Feature 2 -->
+                    <div class="feature-item reverse">
+                        <div class="feature-content">
+                            <h3>
+                                Calcule plus de 20 indicateurs à la parcelle, de l'IFT à la marge, en passant par l'EIQ
+                                et le temps de travail
+                            </h3>
+                            <p>Besoin d'un indicateur pas encore présent ? Contactez-nous !</p>
+                        </div>
+                        <div class="feature-image">
+                            <img
+                                src="images/features/2 - Calcul de nombreux indicateurs.png"
+                                alt="Calcul des indicateurs"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <h3>Saisie et recherche dans les référentiels facilitées grâce à l'IA</h3>
+                            <p>
+                                Plutôt que de passer des heures dans les barèmes, référentiels et autres PDF, laissez
+                                l'IA le faire pour vous. Pas de panique si il lui manque des infos, on peut ajouter des
+                                précisions après coup.
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="images/features/3 - Saisie assistée par IA.png" alt="Saisie assistée par IA" />
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-item reverse">
+                        <div class="feature-content">
+                            <h3>Analyse du système par IA (risques, optimisations, ...)</h3>
+                            <p>
+                                L'assistant IA peut lire l'ensemble du système et agir dessus : changement de cahier des
+                                charges, vérification de la cohérence, ajout d'une production, etc… Vous pouvez aussi
+                                demander à l'IA ce qu'elle en pense en terme de risque sur tel ou tel ravageur.
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="images/features/4 - Analyse du système par IA.png" alt="Analyse par IA" />
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <h3>
+                                Comparaison avec des variations du système, ainsi qu'avec les systèmes documentés dans
+                                les projets de recherche
+                            </h3>
+                            <p>
+                                Il est possible de faire des copies du système pour tester des modifications
+                                (reconceptions, optimisation, …) et voir ce que ça donne en terme économique, mais aussi
+                                en terme d'impact environnemental ou sur le temps de travail….
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img
+                                src="images/features/5 - Comparaison des variantes.png"
+                                alt="Comparaison des variantes"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-item reverse">
+                        <div class="feature-content">
+                            <h3>Géolocalisation et taxonomie</h3>
+                            <p>
+                                Tous les systèmes dans Itinera sont géolocalisés, et associés à quelques mots clés qui
+                                permettent de rapidement filtrer les systèmes pour comparer par production, cahier des
+                                charges ou territoire…
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img
+                                src="images/features/6 - Géolocalisation et taxonomie.png"
+                                alt="Géolocalisation et taxonomie"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Feature 7 -->
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <h3>Partage avancés des systèmes</h3>
+                            <p>
+                                Une fois vos systèmes proprement documentés, il est possible de le partager pour que les
+                                autres utilisateurs d'Itinera puissent le consulter. Vous pouvez même indiquer une URL
+                                sur un site tiers (Ecophyto, Triple Performance, Youtube) pour documenter plus
+                                longuement la stratégie de l'agriculteur.
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="images/features/7 - Droits et partage avancé.png" alt="Partage des systèmes" />
+                        </div>
+                    </div>
+
+                    <!-- Feature 8 -->
+                    <div class="feature-item reverse">
+                        <div class="feature-content">
+                            <h3>Conçu pour s'intégrer facilement avec les systèmes de gestion parcellaires</h3>
+                            <p>
+                                Itinera se veut un système ouvert. Il permet d'importer facilement des données issues de
+                                Triple Performance, Systerre, Assolia, et de tout système capable d'exporter au format
+                                Daplos. Si vous avez d'autres besoins, contactez-nous !
+                            </p>
+                        </div>
+                        <div class="feature-image">
+                            <img
+                                src="images/features/8 - Intégration avec de nombreux systèmes.png"
+                                alt="Intégration avec d'autres systèmes"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <h2>Restez informé</h2>
+                    <p class="contact-intro">Intéressés par Itinera ? Prenez rendez-vous :</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="success-message" id="successMessage">
+                            Merci pour votre message ! Nous vous contacterons bientôt.
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" name="firstname" required />
+                                <span class="error-message" id="firstnameError">Veuillez entrer votre prénom</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" name="lastname" required />
+                                <span class="error-message" id="lastnameError">Veuillez entrer votre nom</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required />
+                            <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Dites-nous en plus sur votre besoin !</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
+            </div>
+        </footer>
+
+        <!-- Contact Form Handler -->
+        <script src="js/contact-form.js"></script>
+
+        <script>
+            // Sticky Menu Handler
+            const stickyMenu = document.getElementById("stickyMenu");
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                const headerBottom = header.offsetHeight;
+                const scrollTop = window.scrollY;
+
+                if (scrollTop > headerBottom) {
+                    stickyMenu.classList.add("visible");
+                } else {
+                    stickyMenu.classList.remove("visible");
                 }
-                // Close mobile menu after click
-                menuLinks.classList.remove('active');
-                burgerMenu.classList.remove('active');
             });
-        });
 
-        // Burger Menu Handler
-        const burgerMenu = document.getElementById('burgerMenu');
-        const menuLinks = document.getElementById('menuLinks');
+            // Smooth scroll behavior for anchor links
+            document.querySelectorAll(".sticky-menu-links a").forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    const href = link.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }
+                    // Close mobile menu after click
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                });
+            });
 
-        burgerMenu.addEventListener('click', () => {
-            burgerMenu.classList.toggle('active');
-            menuLinks.classList.toggle('active');
-        });
+            // Burger Menu Handler
+            const burgerMenu = document.getElementById("burgerMenu");
+            const menuLinks = document.getElementById("menuLinks");
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
-                menuLinks.classList.remove('active');
-                burgerMenu.classList.remove('active');
-            }
-        });
-    </script>
+            burgerMenu.addEventListener("click", () => {
+                burgerMenu.classList.toggle("active");
+                menuLinks.classList.toggle("active");
+            });
 
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5882962.js"></script>
-    <!-- End of HubSpot Embed Code -->    
-</body>
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+            });
+        </script>
+
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5882962.js"></script>
+        <!-- End of HubSpot Embed Code -->
+    </body>
 </html>

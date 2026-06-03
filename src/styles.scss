@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Variables
 $primary-color: #6b9571;
 $secondary-color: #6b9571;
@@ -702,7 +704,7 @@ footer {
 }
 
 .pricing-card-header {
-    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+    background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -12%) 100%);
     color: white;
     padding: 2rem 1.5rem;
     text-align: center;
@@ -807,7 +809,7 @@ footer {
     position: relative;
 
     thead {
-        background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+        background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -12%) 100%);
         color: white;
     }
 
@@ -823,7 +825,7 @@ footer {
         }
 
         &.featured {
-            background: linear-gradient(135deg, lighten($primary-color, 5%) 0%, $primary-color 100%);
+            background: linear-gradient(135deg, color.adjust($primary-color, $lightness: 5%) 0%, $primary-color 100%);
             position: relative;
 
             &::before {
@@ -947,7 +949,7 @@ footer {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 12%) 100%);
+    background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -12%) 100%);
     color: white;
 
     &:hover {

@@ -486,10 +486,22 @@ header {
                 text-decoration: none;
             }
         }
+
+        // Shown only in the mobile burger menu (desktop keeps the "Démarrer" button)
+        .menu-app-link {
+            display: none;
+        }
     }
 
     .logo {
         font-size: 27px;
+        color: $text-light;
+        text-decoration: none;
+
+        &:hover {
+            color: $text-light;
+            text-decoration: none;
+        }
 
         img {
             position: relative;
@@ -598,7 +610,7 @@ footer {
             margin-top: 0;
 
             &.active {
-                max-height: 400px;
+                max-height: 500px;
                 margin-top: 1rem;
             }
 
@@ -609,6 +621,27 @@ footer {
 
                 &:last-child {
                     border-bottom: none;
+                }
+            }
+
+            .menu-app-link {
+                display: block;
+                margin-top: 1rem;
+                padding: 0.9rem 1rem;
+                background: $accent-color;
+                color: $text-dark;
+                font-weight: 700;
+                text-align: center;
+                border-bottom: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(244, 162, 97, 0.4);
+                transition: background 200ms ease, transform 100ms ease;
+
+                &:hover,
+                &:active {
+                    opacity: 1;
+                    background: color.adjust($accent-color, $lightness: -7%);
+                    text-decoration: none;
                 }
             }
         }

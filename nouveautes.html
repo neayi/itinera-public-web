@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Les nouveautés d'Itinera : toutes les évolutions de l'outil collaboratif pour les transitions agricoles, semaine après semaine."
+        />
+        <meta name="og:image" content="https://itinera.ag/images/Itinera Open graph.jpg" />
+        <title>Nouveautés - Itinera by neayi</title>
+        <link rel="icon" type="image/png" href="images/Itinera.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="dist/styles.css" />
+
+        <!-- Matomo -->
+        <script>
+            var _paq = (window._paq = window._paq || []);
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
+            (function () {
+                var u = "//matomo.tripleperformance.fr/";
+                _paq.push(["setTrackerUrl", u + "matomo.php"]);
+                _paq.push(["setSiteId", "4"]);
+                var d = document,
+                    g = d.createElement("script"),
+                    s = d.getElementsByTagName("script")[0];
+                g.async = true;
+                g.src = u + "matomo.js";
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <!-- End Matomo Code -->
+    </head>
+    <body>
+        <nav class="sticky-menu visible" id="stickyMenu">
+            <div class="container">
+                <div class="sticky-menu-content">
+                    <div class="menu-header">
+                        <a href="index.html" class="logo"
+                            ><img src="images/Itinera.svg" alt="Itinera Logo" /> Itinera</a
+                        >
+                        <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="sticky-menu-links" id="menuLinks">
+                        <a href="index.html#about">À propos</a>
+                        <a href="index.html#usecases">Cas d'usage</a>
+                        <a href="index.html#features">Fonctionnalités</a>
+                        <a href="pricing.html">Tarifs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="nouveautes.html">Nouveautés</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="https://app.itinera.ag" class="menu-app-link">Accéder à Itinera &rarr;</a>
+                    </div>
+                    <a href="https://app.itinera.ag/" class="btn btn-light btn-sm cta-btn">Démarrer</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="about-section mt-5">
+                <div class="container">
+                    <h1>Itinera - Nouveautés</h1>
+                    <p class="releases-intro">
+                        Itinera évolue chaque semaine, au plus près des retours des agriculteurs, des conseillers et des
+                        structures qui l'utilisent. Retrouvez ici les principales nouveautés, de la plus récente à la
+                        plus ancienne.
+                    </p>
+
+                    <div class="releases-timeline">
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-10-06">6 octobre 2026</time>
+                                <span class="release-version">V3.21</span>
+                            </div>
+                            <h2>Des calculs adossés à de vrais référentiels de prix</h2>
+                            <p>
+                                Les coûts calculés par Itinera s'appuient désormais sur des référentiels de prix réels,
+                                pour des comparaisons encore plus solides.
+                            </p>
+                            <ul>
+                                <li>
+                                    Nouveaux référentiels de prix pour les produits phytosanitaires, les engrais et le
+                                    GNR.
+                                </li>
+                                <li>
+                                    Une date de référence modifiable pour les calculs : comparez vos systèmes avec les
+                                    prix d'une même période.
+                                </li>
+                                <li>
+                                    Les variations d'indicateurs sont colorées selon qu'elles sont favorables ou non :
+                                    l'essentiel saute aux yeux.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-10-01">1er octobre 2026</time>
+                                <span class="release-version">V3.19</span>
+                            </div>
+                            <h2>Un catalogue phyto consultable et une intégration Agri-Maker complète</h2>
+                            <ul>
+                                <li>
+                                    Nouvelle interface de recherche des produits phytosanitaires : usages, matières
+                                    actives et informations réglementaires en quelques clics.
+                                </li>
+                                <li>
+                                    L'agriculteur et la ferme associés à un système peuvent maintenant être modifiés.
+                                </li>
+                                <li>
+                                    Les abonnés Agri-Maker retrouvent automatiquement leur licence dans Itinera, sans
+                                    démarche supplémentaire.
+                                </li>
+                                <li>Le référentiel de semences s'enrichit d'une nouvelle source de prix (Cereapro).</li>
+                                <li>Une page de documentation dédiée aux systèmes de référence.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-09-25">25 septembre 2026</time>
+                                <span class="release-version">V3.16</span>
+                            </div>
+                            <h2>Un référentiel de semences complet</h2>
+                            <p>
+                                Le coût des semences est un poste clé : Itinera intègre désormais un véritable
+                                référentiel, consultable par tous.
+                            </p>
+                            <ul>
+                                <li>
+                                    Un catalogue de semences consultable avec filtres, tris et recherche par espèce,
+                                    synonyme ou nom latin.
+                                </li>
+                                <li>
+                                    Des fiches détaillées pour chaque semence : informations agronomiques, traitements,
+                                    mélanges, sources et historique des prix.
+                                </li>
+                                <li>
+                                    Des tableaux de bord de prix avec comparaisons annuelles par catégorie et espèce.
+                                </li>
+                                <li>
+                                    Des recommandations de semences par l'IA plus justes, appuyées sur les prix de
+                                    référence.
+                                </li>
+                                <li>Le sélecteur de colonnes du tableau a été revu pour plus de lisibilité.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-09-12">12 septembre 2026</time>
+                                <span class="release-version">V3.12</span>
+                            </div>
+                            <h2>Connexion avec votre compte Agri-Maker</h2>
+                            <ul>
+                                <li>
+                                    Connectez-vous à Itinera directement avec votre compte Agri-Maker, en toute
+                                    sécurité.
+                                </li>
+                                <li>Premiers imports de semences, préfigurant le futur référentiel.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-09-04">4 septembre 2026</time>
+                                <span class="release-version">V3.09</span>
+                            </div>
+                            <h2>Itinera dans votre poche, et des systèmes plus faciles à partager</h2>
+                            <ul>
+                                <li>Une version mobile pour consulter vos systèmes partout, y compris au champ.</li>
+                                <li>
+                                    L'assistant et les rapports passent à Claude Opus, le modèle d'IA le plus avancé
+                                    d'Anthropic, pour des analyses plus fines.
+                                </li>
+                                <li>Calcul des produits phytosanitaires entièrement revu pour gagner en précision.</li>
+                                <li>
+                                    Les systèmes publics s'affichent avec un aperçu soigné (graphique inclus) lorsqu'ils
+                                    sont partagés sur les réseaux sociaux ou par messagerie.
+                                </li>
+                                <li>Les rapports générés sont téléchargeables même en consultation seule.</li>
+                                <li>Un nouveau filtre dans le tableau des interventions.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-07-28">28 juillet 2026</time>
+                                <span class="release-version">V3.04</span>
+                            </div>
+                            <h2>Des imports encore plus fidèles</h2>
+                            <ul>
+                                <li>Le type de sol est maintenant repris tel quel depuis vos logiciels de gestion.</li>
+                                <li>Import Geofolia amélioré.</li>
+                                <li>Un export JSON simplifié, plus facile à réutiliser dans vos propres outils.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-07-24">24 juillet 2026</time>
+                                <span class="release-version">V3.02</span>
+                            </div>
+                            <h2>Votre compte Itinera, avec connexion Google</h2>
+                            <ul>
+                                <li>
+                                    Une authentification entièrement repensée, avec la possibilité de se connecter en un
+                                    clic via son compte Google.
+                                </li>
+                                <li>
+                                    Chaque nouvel utilisateur dispose d'un système d'exemple pour prendre l'outil en
+                                    main immédiatement.
+                                </li>
+                                <li>
+                                    L'adresse complète de la ferme est transmise à l'assistant IA pour des réponses
+                                    mieux ancrées dans le contexte local.
+                                </li>
+                                <li>
+                                    Comparaisons détaillées culture par culture, et corrections dans le calcul des
+                                    phytos.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-07-17">17 juillet 2026</time>
+                                <span class="release-version">V2.63</span>
+                            </div>
+                            <h2>Découvrir Itinera sans créer de compte</h2>
+                            <ul>
+                                <li>
+                                    Un mode découverte pour explorer les systèmes publics d'Itinera sans être connecté.
+                                </li>
+                                <li>
+                                    Un tableau plus lisible : lignes d'étapes fixes au défilement et repères colorés
+                                    devant chaque étape.
+                                </li>
+                                <li>Détail des indicateurs culture par culture, à déplier d'un clic.</li>
+                                <li>Un lien « terminer le calcul » directement dans le tableau.</li>
+                                <li>De nombreuses corrections pour une expérience plus fiable.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-07-10">10 juillet 2026</time>
+                                <span class="release-version">V2.60</span>
+                            </div>
+                            <h2>Une page dédiée pour comparer vos systèmes</h2>
+                            <ul>
+                                <li>
+                                    Nouvelle page de comparaison de systèmes, avec indicateurs de synthèse, radar et
+                                    export Excel.
+                                </li>
+                                <li>
+                                    Les produits phytos retirés ou importés sont désormais pris en compte, ainsi que la
+                                    classification HRAC des herbicides.
+                                </li>
+                                <li>Passage à Claude Sonnet 5 pour des calculs plus rapides et plus précis.</li>
+                                <li>
+                                    Un clic sur une cellule GES affiche le détail des émissions ; l'IFT est décomposé en
+                                    sous-colonnes.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-07-03">3 juillet 2026</time>
+                                <span class="release-version">V2.56</span>
+                            </div>
+                            <h2>Fusionner des itinéraires techniques</h2>
+                            <ul>
+                                <li>
+                                    Intégrez des itinéraires techniques importés directement dans un système existant.
+                                </li>
+                                <li>Import SMAG possible même sans les informations de coûts.</li>
+                                <li>Un partage de systèmes plus robuste.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-06-26">26 juin 2026</time>
+                                <span class="release-version">V2.54</span>
+                            </div>
+                            <h2>Import SMAG et partage en masse</h2>
+                            <ul>
+                                <li>Importez vos données depuis SMAG (CSV), avec une documentation pas à pas.</li>
+                                <li>Partagez plusieurs systèmes en une seule fois.</li>
+                                <li>Les partages de chaque système sont visibles directement dans la liste.</li>
+                                <li>Une liste de types d'interventions plus complète, compatible SMAG.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-06-11">11 juin 2026</time>
+                                <span class="release-version">V2.51</span>
+                            </div>
+                            <h2>Import Mes Parcelles</h2>
+                            <ul>
+                                <li>Nouvel import Excel depuis Mes Parcelles.</li>
+                                <li>Calcul des prix de vente amélioré.</li>
+                                <li>Meilleure intégration avec TIKA.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-06-05">5 juin 2026</time>
+                                <span class="release-version">V2.46</span>
+                            </div>
+                            <h2>Toujours plus de formats d'import : Geofolia Excel et Scopix</h2>
+                            <ul>
+                                <li>Nouveaux imports Geofolia (Excel) et Scopix.</li>
+                                <li>Une page de documentation dédiée aux imports.</li>
+                                <li>
+                                    Des imports plus robustes, qui ne vous bloquent plus en cas de question de licence.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-05-20">20 mai 2026</time>
+                                <span class="release-version">V2.43</span>
+                            </div>
+                            <h2>Rapports automatiques et carte des systèmes</h2>
+                            <ul>
+                                <li>
+                                    Des rapports générés automatiquement : stratégie de gestion des adventices,
+                                    fertilisation…
+                                </li>
+                                <li>Export Word basé sur un modèle mis en forme.</li>
+                                <li>Une carte interactive pour rechercher des systèmes près de chez vous.</li>
+                                <li>Import Daplos amélioré.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-05-15">15 mai 2026</time>
+                                <span class="release-version">V2.28</span>
+                            </div>
+                            <h2>Des calculs plus justes</h2>
+                            <ul>
+                                <li>Correction du calcul du produit (rendement × prix de vente).</li>
+                                <li>Les indicateurs de progression des variantes sont bien renseignés.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-04-29">29 avril 2026</time>
+                                <span class="release-version">V2.27</span>
+                            </div>
+                            <h2>Plus de fiabilité</h2>
+                            <ul>
+                                <li>
+                                    Mise en place d'un suivi des erreurs pour corriger les problèmes plus rapidement.
+                                </li>
+                                <li>Les calculs en masse demandent désormais une confirmation.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-04-22">22 avril 2026</time>
+                                <span class="release-version">V2.26</span>
+                            </div>
+                            <h2>Une nouvelle génération d'indicateurs</h2>
+                            <p>Une version majeure pour la précision et la richesse des calculs.</p>
+                            <ul>
+                                <li>Une trentaine de nouveaux indicateurs.</li>
+                                <li>
+                                    Intégration de la base Ephy et de l'EIQ de l'université Cornell pour les calculs
+                                    phytos.
+                                </li>
+                                <li>Un calcul des engrais beaucoup plus précis et détaillé.</li>
+                                <li>
+                                    Des calculs bien plus rapides, qui continuent même fenêtre fermée : un e-mail vous
+                                    prévient à la fin.
+                                </li>
+                                <li>
+                                    Les indicateurs liés sont calculés ensemble, et la discussion avec l'IA les met à
+                                    jour simultanément.
+                                </li>
+                                <li>Vos colonnes affichées sont mémorisées.</li>
+                                <li>
+                                    Nouvel import Geofolia et possibilité de combiner plusieurs systèmes en un seul.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-04-10">10 avril 2026</time>
+                                <span class="release-version">V2.12</span>
+                            </div>
+                            <h2>Exports Word et JSON</h2>
+                            <ul>
+                                <li>Exportez vos systèmes au format Word ou JSON.</li>
+                                <li>Suggestions automatiques pour les productions, cahiers des charges et sols.</li>
+                                <li>Nouvel indicateur de quantité de GNR.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-04-03">3 avril 2026</time>
+                                <span class="release-version">V2.11</span>
+                            </div>
+                            <h2>Import Daplos et partage individuel</h2>
+                            <ul>
+                                <li>Importez vos données au format standard AgroEDI Europe Daplos.</li>
+                                <li>Partagez un système avec des personnes précises, en lecture ou en écriture.</li>
+                                <li>La vue Explorer affiche désormais tous les systèmes, y compris les vôtres.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-03-27">27 mars 2026</time>
+                                <span class="release-version">V2.07</span>
+                            </div>
+                            <h2>Abonnements en ligne et visite guidée</h2>
+                            <ul>
+                                <li>Souscrivez à Itinera en ligne, en toute simplicité.</li>
+                                <li>Une visite guidée pour découvrir l'outil pas à pas.</li>
+                                <li>Une page de documentation complète.</li>
+                                <li>Choisissez précisément les indicateurs à calculer.</li>
+                                <li>
+                                    Des indicateurs mieux chaînés : le GNR dépend du temps de travail, les GES du GNR.
+                                </li>
+                                <li>
+                                    Les données climatiques sont récupérées dès que la localisation est connue ; les
+                                    sols suivent le triangle des textures USDA.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-03-17">17 mars 2026</time>
+                                <span class="release-version">V1.04</span>
+                            </div>
+                            <h2>Une application plus stable</h2>
+                            <ul>
+                                <li>Récupération des données de sol plus fiable.</li>
+                                <li>Corrections de navigation.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-03-13">13 mars 2026</time>
+                                <span class="release-version">V1.02</span>
+                            </div>
+                            <h2>Itinera 1.0 : place à Claude</h2>
+                            <ul>
+                                <li>L'IA d'Itinera s'appuie désormais sur les modèles Claude d'Anthropic.</li>
+                                <li>Un indicateur de complétude pour savoir où en est chaque système.</li>
+                                <li>Un assistant redimensionnable et plus agréable à utiliser.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-03-04">4 mars 2026</time>
+                                <span class="release-version">V0.32</span>
+                            </div>
+                            <h2>Sols et climat automatiquement renseignés</h2>
+                            <ul>
+                                <li>Les caractéristiques du sol sont récupérées automatiquement via SoilGrids.</li>
+                                <li>Les données climatiques proviennent désormais de l'API de la NASA.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-02-22">22 février 2026</time>
+                                <span class="release-version">V0.30</span>
+                            </div>
+                            <h2>Export Excel et indicateurs revus en profondeur</h2>
+                            <ul>
+                                <li>Exportez vos systèmes vers Excel.</li>
+                                <li>Nouvel indicateur de coût de main-d'œuvre.</li>
+                                <li>Import depuis Triple Performance et données climatiques.</li>
+                                <li>
+                                    Une recherche de systèmes plus rapide, et la possibilité d'ouvrir plusieurs systèmes
+                                    dans des onglets.
+                                </li>
+                                <li>
+                                    Relecture complète des méthodes de calcul de tous les indicateurs : semences,
+                                    engrais, phytos, IFT, GES, EIQ, mécanisation, GNR, temps de travail…
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-02-13">13 février 2026</time>
+                                <span class="release-version">V0.18</span>
+                            </div>
+                            <h2>Un assistant IA pour faire évoluer vos systèmes</h2>
+                            <ul>
+                                <li>
+                                    Décrivez les évolutions de votre système en langage naturel : l'assistant IA les
+                                    propose, et vous validez chaque modification.
+                                </li>
+                                <li>Comparez votre système à ses variantes, côte à côte.</li>
+                                <li>Import Systerre (Excel).</li>
+                                <li>Les interventions sont typées pour des analyses plus fines.</li>
+                                <li>Des liens vers le wiki Triple Performance pour approfondir chaque pratique.</li>
+                            </ul>
+                        </article>
+
+                        <article class="release-item">
+                            <div class="release-meta">
+                                <time datetime="2026-02-03">3 février 2026</time>
+                                <span class="release-version">V0.11</span>
+                            </div>
+                            <h2>Les premiers pas d'Itinera</h2>
+                            <ul>
+                                <li>Un assistant de création de système pas à pas.</li>
+                                <li>Création de variantes pour explorer des scénarios alternatifs.</li>
+                                <li>Partage de systèmes et import depuis TIKA.</li>
+                                <li>Des contenus issus du wiki Triple Performance intégrés à l'outil.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <h2>Restez informé</h2>
+                    <p class="contact-intro">Intéressés par Itinera ? Prenez rendez-vous :</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="success-message" id="successMessage">
+                            Merci pour votre message ! Nous vous contacterons bientôt.
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" name="firstname" required />
+                                <span class="error-message" id="firstnameError">Veuillez entrer votre prénom</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" name="lastname" required />
+                                <span class="error-message" id="lastnameError">Veuillez entrer votre nom</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required />
+                            <span class="error-message" id="emailError">Veuillez entrer une adresse email valide</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Dites-nous en plus sur votre besoin !</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 <a href="https://neayi.com">Neayi</a>. Tous droits réservés.</p>
+                <p>
+                    <a href="https://app.itinera.ag/docs/confidentialite">Règles de confidentialité</a>
+                    &middot;
+                    <a href="https://app.itinera.ag/docs/conditions-utilisation">Conditions d'utilisation</a>
+                </p>
+            </div>
+        </footer>
+
+        <!-- Contact Form Handler -->
+        <script src="js/contact-form.js"></script>
+
+        <script>
+            // Sticky Menu Handler
+            const stickyMenu = document.getElementById("stickyMenu");
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                const headerBottom = header ? header.offsetHeight : 0;
+                const scrollTop = window.scrollY;
+
+                if (scrollTop > headerBottom) {
+                    stickyMenu.classList.add("visible");
+                } else {
+                    stickyMenu.classList.remove("visible");
+                }
+            });
+
+            // Smooth scroll behavior for anchor links
+            document.querySelectorAll(".sticky-menu-links a").forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    const href = link.getAttribute("href");
+                    if (href.startsWith("#")) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }
+                });
+            });
+
+            // Burger Menu Handler
+            const burgerMenu = document.getElementById("burgerMenu");
+            const menuLinks = document.getElementById("menuLinks");
+
+            burgerMenu.addEventListener("click", () => {
+                burgerMenu.classList.toggle("active");
+                menuLinks.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!burgerMenu.contains(e.target) && !menuLinks.contains(e.target)) {
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+            });
+
+            // Close mobile menu after click
+            document.querySelectorAll(".sticky-menu-links a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    menuLinks.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                });
+            });
+        </script>
+
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5882962.js"></script>
+        <!-- End of HubSpot Embed Code -->
+    </body>
+</html>
